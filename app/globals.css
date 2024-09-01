@@ -2,32 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 100;
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply text-black;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .btn {
+    @apply rounded-xl font-semibold transition-all;
+  }
+  .btn-sm {
+    @apply px-6 py-3;
+  }
+  .btn-lg {
+    @apply px-6 py-4;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white;
+  }
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white;
+  }
+  .input {
+    @apply px-6 py-4;
+  }
+  .textarea {
+    @apply resize-none px-6 py-4;
+  }
+  .input,
+  .textarea {
+    @apply focus:outline-orange rounded-lg border font-semibold outline-1 transition-all duration-100 placeholder:text-[15px] placeholder:font-semibold placeholder:text-[#767676] focus:outline-double;
+  }
+  .gradient {
+    @apply to-primary via-orange from-primary bg-size-200 bg-pos-0 hover:bg-pos-100 bg-gradient-to-r text-white transition-all duration-500;
   }
 }
