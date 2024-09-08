@@ -4,27 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import Modal from "react-modal";
-
-interface Topping {
-  image: string;
-  name: string;
-  price: number;
-}
-
-interface PizzaType {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  priceSm: number;
-  priceMd: number;
-  priceLg: number;
-  toppings: Topping[];
-}
-
-export interface PizzaProps {
-  pizza: PizzaType;
-}
+import PizzaDetails from "./PizzaDetails";
+import { PizzaProps } from "../types/pizza";
 
 // blind modal to body
 Modal.setAppElement("body");
@@ -115,6 +96,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
           </div>
 
           {/*pizza details */}
+          <PizzaDetails pizza={pizza} modal={modal} setModal={setModal} />
         </Modal>
       )}
     </div>
