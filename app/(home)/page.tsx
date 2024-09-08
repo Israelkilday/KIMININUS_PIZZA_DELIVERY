@@ -378,7 +378,8 @@ export default function Home() {
   return (
     <section>
       <div className="container mx-auto">
-        <div>
+        {/* pizza grid */}
+        <div className="grid gap-[15px] py-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:gap-[30px]">
           {pizzas.map((pizza) => {
             return <Pizza key={pizza.id} pizza={pizza} />;
           })}

@@ -44,16 +44,26 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
       </div>
 
       {/* description */}
-      <div className="mb-6 min-h-[60px] bg-pink-200 text-sm font-medium">
+      <div className="mb-6 min-h-[60px] text-sm font-medium">
         {pizza.description}
       </div>
 
       {/* price & btn  */}
-      <div>
+      <div className="mb-6 flex items-center justify-between">
         {/* price -> hidden (sm) - visible (lg) */}
         <div className="hidden text-xl font-semibold lg:flex">
           stars at {pizza.priceSm}
         </div>
+
+        {/* btn -> hidden (sm) - visible (lg) */}
+        <button className="gradient btn-sm hidden rounded-lg font-semibold text-white lg:flex">
+          Choose
+        </button>
+
+        {/*btn -> visible (sm) -hidden (lg)  */}
+        <button className="btn btn-sm gradient px-3 text-sm lg:hidden">
+          starts at {pizza.priceSm}
+        </button>
       </div>
     </div>
   );
