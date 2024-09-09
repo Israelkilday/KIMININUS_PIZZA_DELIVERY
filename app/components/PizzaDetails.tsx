@@ -71,14 +71,14 @@ const PizzaDetails: React.FC<PizzaProps> = ({ pizza, modal, setModal }) => {
 
       {/* details */}
       <div className="flex flex-1 flex-col bg-pink-100">
-        <div className="flex-1 p-2">
-          <div>
+        <div className="flex-1 p-2 text-center lg:text-left">
+          <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200">
             {/*name */}
             <div className="font-semibold">
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
 
               {/* size & crust text */}
-              <div>
+              <div className="mb-6 bg-yellow-200 text-lg font-medium">
                 <span>
                   {size === "small"
                     ? "25 cm"
@@ -112,8 +112,8 @@ const PizzaDetails: React.FC<PizzaProps> = ({ pizza, modal, setModal }) => {
           </div>
         </div>
 
-        {/* add to cart */}
-        <div>
+        {/* add to cart btn */}
+        <div className="flex h-full items-center px-2 lg:items-end">
           <button className="btn btn-lg gradient flex w-full justify-center">
             <div>Add to cart for</div>
             <div>$ {price}</div>
