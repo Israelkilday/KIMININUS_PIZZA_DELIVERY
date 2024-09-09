@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { PizzaProps, Topping } from "../types/pizza";
 import Image from "next/image";
+import SizeSelection from "./SizeSelection";
 
 // eslint-disable-next-line no-unused-vars
 const PizzaDetails: React.FC<PizzaProps> = ({ pizza, modal, setModal }) => {
   // pizza size state
-  const [size] = useState("small");
+  const [size, setSize] = useState("small");
 
   // pizza crust state
   const [crust] = useState("traditional");
@@ -94,7 +95,7 @@ const PizzaDetails: React.FC<PizzaProps> = ({ pizza, modal, setModal }) => {
             </div>
 
             {/* size selection */}
-            {/* <SizeSelection /> */}
+            <SizeSelection pizza={pizza} size={size} setSize={setSize} />
 
             {/* crust sizesection */}
             {/* <CrustSelection /> */}

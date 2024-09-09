@@ -6,7 +6,7 @@ export interface Topping {
   price: number;
 }
 
-interface PizzaType {
+export interface PizzaType {
   id: number;
   name: string;
   description: string;
