@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface Topping {
   image: string;
   name: string;
@@ -19,6 +17,4 @@ export interface PizzaType {
 
 export interface PizzaProps {
   pizza: PizzaType;
-  modal?: boolean;
-  setModal?: Dispatch<SetStateAction<boolean>>;
 }

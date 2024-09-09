@@ -1,10 +1,15 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
-import { PizzaProps, Topping } from "../types/pizza";
+import { Topping } from "../types/pizza";
 import Image from "next/image";
 import SizeSelection from "./SizeSelection";
+import { PizzaDetailsProps } from "../types/PizzaDetails";
 
-// eslint-disable-next-line no-unused-vars
-const PizzaDetails: React.FC<PizzaProps> = ({ pizza, modal, setModal }) => {
+const PizzaDetails: React.FC<PizzaDetailsProps> = ({
+  pizza,
+  modal,
+  setModal,
+}) => {
   // pizza size state
   const [size, setSize] = useState("small");
 
