@@ -18,7 +18,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             width={60}
             height={60}
             alt="pizza_iamge_label"
-            className={`${size === "small" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"}`}
+            className={`${size === "small" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"
@@ -38,7 +38,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             width={70}
             height={70}
             alt="pizza_iamge_label"
-            className={`${size === "medium" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"}`}
+            className={`${size === "medium" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"
@@ -58,7 +58,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             width={80}
             height={80}
             alt="pizza_iamge_label"
-            className={`${size === "large" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"}`}
+            className={`${size === "large" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"

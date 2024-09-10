@@ -82,7 +82,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
 
               {/* size & crust text */}
-              <div className="mb-6 bg-yellow-200 text-lg font-medium">
+              <div className="mb-6 text-lg font-medium">
                 <span>
                   {size === "small"
                     ? "25 cm"
@@ -104,7 +104,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
             <CrustSelection crust={crust} setCrust={setCrust} />
 
             {/* toppings */}
-            <div>Chosse Toppings</div>
+            <div className="mb-4 text-xl font-semibold">Chosse Toppings</div>
 
             {/* topping list */}
             <div>
