@@ -25,7 +25,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({
   // price state
   const [price, setPrice] = useState(0);
 
-  // set the price basead on the pizza price
+  // set the price basead on the pizza size
   useEffect(() => {
     const basePrice =
       size === "small"
@@ -35,6 +35,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({
           : size === "large"
             ? pizza.priceLg
             : 0;
+
     const finalPrice = basePrice + additionalToppingPrice;
     setPrice(parseFloat(finalPrice.toFixed(2)));
   }, [
