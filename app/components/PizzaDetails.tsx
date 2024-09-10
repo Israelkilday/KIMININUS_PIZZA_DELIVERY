@@ -64,8 +64,8 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
         {/* pizza image */}
         <div className="mt-6 max-w-[300px] lg:mt-0 lg:max-w-none">
           <Image
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             src={pizza.image}
             alt="image modal"
             priority={true}
@@ -77,7 +77,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
       {/* details */}
       <div className="flex flex-1 flex-col">
         <div className="flex-1 p-2 text-center lg:text-left">
-          <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200">
+          <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200 lg:h-[50vh]">
             {/*name */}
             <div className="font-semibold">
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
@@ -108,7 +108,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
             <div className="mb-4 text-xl font-semibold">Chosse Toppings</div>
 
             {/* topping list */}
-            <div>
+            <div className="flex flex-1 flex-wrap justify-center gap-2 py-1 lg:justify-start">
               {pizza.toppings?.map((topping, index) => {
                 return (
                   <Toppings
