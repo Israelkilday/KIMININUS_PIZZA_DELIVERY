@@ -4,17 +4,14 @@ import { Topping } from "../types/pizza";
 import Image from "next/image";
 import SizeSelection from "./SizeSelection";
 import { PizzaDetailsProps } from "../types/PizzaDetails";
+import CrustSelection from "./CrustSelection";
 
-const PizzaDetails: React.FC<PizzaDetailsProps> = ({
-  pizza,
-  modal,
-  setModal,
-}) => {
+const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
   // pizza size state
   const [size, setSize] = useState("small");
 
   // pizza crust state
-  const [crust] = useState("traditional");
+  const [crust, setCrust] = useState("traditional");
 
   // pizza topping state
   const [additionalTopping] = useState<Topping[]>([]);
@@ -77,7 +74,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({
       </div>
 
       {/* details */}
-      <div className="flex flex-1 flex-col bg-pink-100">
+      <div className="flex flex-1 flex-col">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200">
             {/*name */}
@@ -104,7 +101,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
 
             {/* crust sizesection */}
-            {/* <CrustSelection /> */}
+            <CrustSelection crust={crust} setCrust={setCrust} />
 
             {/* toppings */}
             <div>Chosse Toppings</div>
