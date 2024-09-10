@@ -5,6 +5,7 @@ import Image from "next/image";
 import SizeSelection from "./SizeSelection";
 import { PizzaDetailsProps } from "../types/PizzaDetails";
 import CrustSelection from "./CrustSelection";
+import Toppings from "./Toppings";
 
 const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
   // pizza size state
@@ -108,10 +109,16 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
 
             {/* topping list */}
             <div>
-              {/* {pizza.toppings?.map((topping, index) => {
-                return <Topping key={index} />;
-              })} */}{" "}
-              TO DO
+              {pizza.toppings?.map((topping, index) => {
+                return (
+                  <Toppings
+                    key={index}
+                    topping={topping}
+                    additionalTopping={additionalTopping}
+                    setAdditionalToppinPrice={setAdditionalToppinPrice}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
