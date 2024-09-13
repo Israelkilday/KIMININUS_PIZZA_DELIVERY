@@ -10,16 +10,20 @@ const Toppings: React.FC<ToppingProps> = ({
   setAdditionalToppinPrice,
 }) => {
   // checkbox state
-  const [isChecked, setTsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckBox = () => {
+    setIsChecked(!isChecked);
+  };
 
   return (
     <div
-      className={`${isChecked && "border-orange"} relative flex h-[140px] w-full max-w-[110px] flex-col items-center rounded-md border bg-white p-1`}
+      className={`${isChecked && "border-orange"} relative flex h-[140px] w-full max-w-[110px] flex-col items-center justify-center rounded-md border bg-white p-1`}
     >
       <Image
         src={topping.image}
-        width={70}
-        height={70}
+        width={60}
+        height={60}
         alt="iamges_of_topping"
         className="mb-2"
       />
@@ -33,11 +37,14 @@ const Toppings: React.FC<ToppingProps> = ({
       <input
         type="checkbox"
         checked={isChecked}
+        onChange={handleCheckBox}
         className="absolute h-full w-full cursor-pointer opacity-0"
       />
 
       {/* checkmark icon */}
-      <div className={`${isChecked ? "opacity-100" : "opacity-0"}`}>
+      <div
+        className={`${isChecked ? "opacity-100" : "opacity-0"} absolute right-1 top-1`}
+      >
         <IoMdCheckmark className="text-xl text-orange" />
       </div>
     </div>
