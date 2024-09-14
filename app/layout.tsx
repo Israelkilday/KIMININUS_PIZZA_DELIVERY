@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bangers, Inter, Quicksand, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
       >
+        <Nav />
         {children}
       </body>
     </html>
