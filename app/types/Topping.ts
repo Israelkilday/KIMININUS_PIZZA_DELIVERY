@@ -4,5 +4,5 @@ import { Topping } from "./pizza";
 export interface ToppingProps {
   topping: Topping;
   additionalTopping: Topping[];
-  setAdditionalToppinPrice: Dispatch<SetStateAction<number>>;
+  setAdditionalTopping: Dispatch<SetStateAction<Topping[]>>;
 }

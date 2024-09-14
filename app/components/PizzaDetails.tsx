@@ -15,7 +15,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
   const [crust, setCrust] = useState("traditional");
 
   // pizza topping state
-  const [additionalTopping] = useState<Topping[]>([]);
+  const [additionalTopping, setAdditionalTopping] = useState<Topping[]>([]);
 
   // pizza topping price
   const [additionalToppingPrice, setAdditionalToppinPrice] = useState(0);
@@ -35,6 +35,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
             : 0;
 
     const finalPrice = basePrice + additionalToppingPrice;
+
     setPrice(parseFloat(finalPrice.toFixed(2)));
   }, [
     size,
@@ -115,7 +116,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
                     key={index}
                     topping={topping}
                     additionalTopping={additionalTopping}
-                    setAdditionalToppinPrice={setAdditionalToppinPrice}
+                    setAdditionalTopping={setAdditionalTopping}
                   />
                 );
               })}

@@ -1,20 +1,44 @@
-/* eslint-disable no-unused-vars */
 import Image from "next/image";
 import { ToppingProps } from "../types/Topping";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 const Toppings: React.FC<ToppingProps> = ({
   topping,
   additionalTopping,
-  setAdditionalToppinPrice,
+  setAdditionalTopping,
 }) => {
   // checkbox state
   const [isChecked, setIsChecked] = useState(false);
 
+  // handle check
   const handleCheckBox = () => {
     setIsChecked(!isChecked);
   };
+
+  // handle topping
+  const handleTopping = useCallback(() => {
+    //  use set ensure unique values
+
+    if (isChecked) {
+      const newToppings = new Set([...additionalTopping, { ...topping }]);
+      setAdditionalTopping(Array.from(newToppings));
+
+      console.log(additionalTopping);
+    } else {
+      // remove the topping with the matching name
+      const newToppings = additionalTopping.filter((toppingObj) => {
+        return toppingObj.name !== topping.name;
+      });
+
+      setAdditionalTopping(newToppings);
+    }
+  }, [isChecked, additionalTopping, topping, setAdditionalTopping]);
+
+  useEffect(() => {
+    handleTopping();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isChecked]);
 
   return (
     <div
