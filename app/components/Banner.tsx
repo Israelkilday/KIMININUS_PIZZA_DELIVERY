@@ -8,12 +8,12 @@ import {
 
 const Banner = () => {
   return (
-    <section className="bg-primary bg-pattern pt-16 lg:min-h-[768px] lg:pt-12">
+    <section className="bg-primary bg-pattern pt-16 lg:min-h-[768px] lg:pt-7">
       <div className="container mx-auto flex min-h-[768px] items-center justify-center">
         <MouseParallaxContainer
           globalFactorX={0.4}
           globalFactorY={0.3}
-          className="flex w-full flex-col items-center justify-between lg:h-[600px] lg:flex-row"
+          className="flex w-full flex-col items-center justify-between lg:h-[630px] lg:flex-row"
         >
           {/* text */}
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
