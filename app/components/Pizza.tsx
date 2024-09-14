@@ -85,7 +85,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
           style={modalStyles}
           onRequestClose={closeModal}
           contentLabel="Pizza Modal"
-          className="h-full w-full bg-white outline-none lg:fixed lg:left-[50%] lg:top-[50%] lg:max-h-[500px] lg:max-w-[750px] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:rounded-[30px]"
+          className="h-full w-full bg-white outline-none lg:fixed lg:left-[50%] lg:top-[50%] lg:max-h-[500px] lg:max-w-[800px] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:rounded-[30px]"
         >
           {/* close modal icon */}
           <div

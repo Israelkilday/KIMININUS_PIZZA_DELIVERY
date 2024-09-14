@@ -23,8 +23,6 @@ const Toppings: React.FC<ToppingProps> = ({
     if (isChecked) {
       const newToppings = new Set([...additionalTopping, { ...topping }]);
       setAdditionalTopping(Array.from(newToppings));
-
-      console.log(additionalTopping);
     } else {
       // remove the topping with the matching name
       const newToppings = additionalTopping.filter((toppingObj) => {
@@ -42,12 +40,12 @@ const Toppings: React.FC<ToppingProps> = ({
 
   return (
     <div
-      className={`${isChecked && "border-orange"} relative flex h-[140px] w-full max-w-[110px] flex-col items-center justify-center rounded-md border bg-white p-1`}
+      className={`${isChecked && "border-orange"} relative flex h-[140px] w-full max-w-[100px] flex-col items-center justify-center rounded-md border bg-white p-1`}
     >
       <Image
         src={topping.image}
-        width={60}
-        height={60}
+        width={50}
+        height={50}
         alt="iamges_of_topping"
         className="mb-2"
       />
