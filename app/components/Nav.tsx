@@ -32,8 +32,11 @@ const Nav = () => {
           {/* cart */}
           <div className="relative hidden cursor-pointer lg:flex">
             <Image src={"bag.svg"} width={38} height={38} alt="bag_image" />
+
             {/* amount */}
-            <div>3</div>
+            <div className="absolute -bottom-2 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-tertiary font-robotoCondensed text-[13px] text-white">
+              3
+            </div>
           </div>
         </div>
       </div>
