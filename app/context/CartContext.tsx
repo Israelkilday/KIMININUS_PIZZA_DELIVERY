@@ -23,6 +23,17 @@ interface AddToCartFunction {
   ): void;
 }
 
+interface CartItemProps {
+  id: number;
+  image: string;
+  name: string;
+  price: number;
+  additionalTopping: Topping[];
+  size: string;
+  crust: string;
+  amount: number;
+}
+
 export interface CartContextType {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -36,7 +47,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // cart state
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<CartItemProps[]>([]);
 
   // add to cart
   const addToCart: AddToCartFunction = (
@@ -49,6 +60,22 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     crust,
   ) => {
     console.log(id, image, name, price, additionalTopping, size, crust);
+
+    // sort additionalTopping array by name
+    additionalTopping.sort((a, b) => a.name.localeCompare(b.name));
+
+    const newItem = {
+      id,
+      image,
+      name,
+      price,
+      additionalTopping,
+      size,
+      crust,
+      amount: 1,
+    };
+
+    setCart([...cart, newItem]);
   };
 
   return (
