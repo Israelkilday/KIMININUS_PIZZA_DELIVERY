@@ -1,10 +1,11 @@
 "use client";
 
 import { useCartContext } from "../context/CartContext";
+import CartItem from "./CartItem";
 import CartTop from "./CartTop";
 
 const CartMobile = () => {
-  const { isOpen } = useCartContext();
+  const { cart, isOpen } = useCartContext();
 
   return (
     <div
@@ -14,7 +15,11 @@ const CartMobile = () => {
       <CartTop />
 
       {/* cart items */}
-      <div>cart items</div>
+      <div>
+        {cart?.map((pizza) => {
+          return <CartItem key={pizza.id} />;
+        })}
+      </div>
 
       {/* cart bottom */}
       {/* <CartBottom /> */}

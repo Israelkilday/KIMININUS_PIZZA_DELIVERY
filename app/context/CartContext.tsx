@@ -38,6 +38,7 @@ export interface CartContextType {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   addToCart: AddToCartFunction;
+  cart: CartItemProps[];
 }
 
 export const CartContext = createContext<CartContextType | null>(null);
@@ -59,8 +60,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     size,
     crust,
   ) => {
-    console.log(id, image, name, price, additionalTopping, size, crust);
-
     // sort additionalTopping array by name
     additionalTopping.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -78,8 +77,10 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart([...cart, newItem]);
   };
 
+  console.log(cart);
+
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart }}>
+    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
       {children}
     </CartContext.Provider>
   );
