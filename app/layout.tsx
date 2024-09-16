@@ -3,6 +3,7 @@ import { Bangers, Inter, Quicksand, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import CartMobileIcon from "./components/CartMobileIcon";
+import CartProvider from "./context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,14 +35,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} ${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
-      >
-        <Nav />
-        <CartMobileIcon />
-        {children}
-      </body>
-    </html>
+    <CartProvider>
+      <html lang="en">
+        <body
+          className={`${inter.className} ${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
+        >
+          <Nav />
+          <CartMobileIcon />
+          {children}
+        </body>
+      </html>
+    </CartProvider>
   );
 }
