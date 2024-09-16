@@ -1,15 +1,8 @@
-import { useContext } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import { CartContext } from "../context/CartContext";
+import { useCartContext } from "../context/CartContext";
 
 const CartTop = () => {
-  const context = useContext(CartContext);
-
-  if (!context) {
-    return null;
-  }
-
-  const { setIsOpen } = context;
+  const { setIsOpen } = useCartContext();
 
   return (
     <div className="flex h-20 w-full items-center justify-between border-b px-10">
