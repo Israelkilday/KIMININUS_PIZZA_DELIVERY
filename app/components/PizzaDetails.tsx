@@ -6,22 +6,20 @@ import SizeSelection from "./SizeSelection";
 import { PizzaDetailsProps } from "../types/PizzaDetails";
 import CrustSelection from "./CrustSelection";
 import Toppings from "./Toppings";
+import { useCartContext } from "../context/CartContext";
 
 const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
   // pizza size state
   const [size, setSize] = useState("small");
-
   // pizza crust state
   const [crust, setCrust] = useState("traditional");
-
   // pizza topping state
   const [additionalTopping, setAdditionalTopping] = useState<Topping[]>([]);
-
   // pizza topping price
   const [additionalToppingPrice, setAdditionalToppingPrice] = useState(0);
-
   // price state
   const [price, setPrice] = useState(0);
+  const { addToCart } = useCartContext();
 
   // set the price basead on the pizza size
   useEffect(() => {
@@ -126,7 +124,20 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
 
         {/* add to cart btn */}
         <div className="flex h-full items-center px-2 lg:items-end">
-          <button className="btn btn-lg gradient flex w-full justify-center">
+          <button
+            onClick={() =>
+              addToCart(
+                pizza.id,
+                pizza.image,
+                pizza.name,
+                price,
+                additionalTopping,
+                size,
+                crust,
+              )
+            }
+            className="btn btn-lg gradient flex w-full justify-center"
+          >
             <div>Add to cart for</div>
             <div>$ {price}</div>
           </button>
