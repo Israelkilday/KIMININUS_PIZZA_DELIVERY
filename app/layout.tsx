@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import CartMobileIcon from "./components/CartMobileIcon";
 import CartProvider from "./context/CartContext";
 import CartMobile from "./components/CartMobile";
+import CartDesktop from "./components/CartDesktop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
           <CartMobileIcon />
           <CartMobile />
           {children}
+          <CartDesktop />
         </body>
       </html>
     </CartProvider>

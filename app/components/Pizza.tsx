@@ -60,7 +60,6 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
         </div>
 
         {/* btn -> hidden (sm) - visible (lg) */}
-
         <button
           onClick={openModal}
           className="gradient btn-sm hidden rounded-lg font-semibold text-white lg:flex"

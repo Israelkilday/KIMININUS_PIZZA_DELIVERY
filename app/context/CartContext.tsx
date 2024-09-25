@@ -69,7 +69,27 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       toppings: additionalTopping,
     };
 
-    setCart([...cart, newItem]);
+    const cartItemIndex = cart.findIndex(
+      (item) =>
+        item.id === id &&
+        item.price === price &&
+        item.size === size &&
+        // check if additionalTopping array is equal
+        JSON.stringify(item.additionalTopping.sort()) ===
+          JSON.stringify(additionalTopping.sort()) &&
+        item.crust === crust,
+    );
+
+    if (cartItemIndex === -1) {
+      setCart([...cart, newItem]);
+    } else {
+      const newCart = [...cart];
+      newCart[cartItemIndex].amount += 1;
+      setCart(newCart);
+    }
+
+    // open the cart everytime you add a product
+    setIsOpen(true);
   };
 
   console.log(cart);

@@ -37,7 +37,7 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
 
               {/* pizza amount */}
               <div className="items center flex max-w-[30px] flex-1 justify-center text-sm font-semibold">
-                1
+                {pizza.amount}
               </div>
 
               {/* increase quantity */}
