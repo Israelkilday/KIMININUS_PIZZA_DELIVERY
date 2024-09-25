@@ -67,7 +67,7 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
       {/* toppings */}
       <div className="flex flex-wrap items-center gap-3 border-b border-black/10 p-6">
         <div className="font-semibold">
-          Toppings:
+          Toppings:{" "}
           {pizza.additionalTopping &&
             pizza.additionalTopping.length === 0 &&
             "None"}

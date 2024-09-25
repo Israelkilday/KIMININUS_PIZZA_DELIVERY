@@ -9,7 +9,7 @@ const CartMobileIcon = () => {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className="fixed bottom-[5%] right-[10%] z-20 flex h-[72px] w-[72px] cursor-pointer items-center justify-center rounded-full bg-tertiary text-white"
+      className="fixed bottom-[5%] right-[10%] z-20 flex h-[72px] w-[72px] cursor-pointer items-center justify-center rounded-full bg-tertiary text-white lg:hidden"
     >
       <BsHandbagFill className="text-4xl" />
 

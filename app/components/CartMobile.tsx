@@ -1,6 +1,7 @@
 "use client";
 
 import { useCartContext } from "../context/CartContext";
+import CartBottom from "./CartBottom";
 import CartItem from "./CartItem";
 import CartTop from "./CartTop";
 
@@ -21,8 +22,9 @@ const CartMobile = () => {
           return <CartItem key={index} pizza={pizza} />;
         })}
       </div>
-      i {/* cart bottom */}
-      {/* <CartBottom /> */}
+
+      {/* cart bottom */}
+      <CartBottom />
     </div>
   );
 };
