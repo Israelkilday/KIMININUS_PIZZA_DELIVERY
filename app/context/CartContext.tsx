@@ -62,19 +62,12 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       size,
       crust,
       amount: 1,
+      description: "",
+      priceSm: 0,
+      priceMd: 0,
+      priceLg: 0,
+      toppings: additionalTopping,
     };
-    // const newItem = {
-    //   pizza: {
-    //     id,
-    //     image,
-    //     name,
-    //     price,
-    //     toppings: additionalTopping,
-    //     size: size === "smal" ? 25 : size === "medium" ? 30 : 35,
-    //     crust,
-    //     amount: 1,
-    //   },
-    // };
 
     setCart([...cart, newItem]);
   };

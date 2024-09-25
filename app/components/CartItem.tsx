@@ -2,7 +2,6 @@ import Image from "next/image";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { IoCloseOutline } from "react-icons/io5";
 import { PizzaProps } from "../types/pizza";
-// import { CartItemProps } from "../types/CartItem";
 
 const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
   return (

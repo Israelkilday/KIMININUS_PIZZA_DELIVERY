@@ -1,10 +1,11 @@
 "use client";
 
 import { useCartContext } from "../context/CartContext";
+import { PizzaProps } from "../types/pizza";
 import CartItem from "./CartItem";
 import CartTop from "./CartTop";
 
-const CartMobile = () => {
+const CartMobile: React.FC<PizzaProps> = () => {
   const { cart, isOpen } = useCartContext();
 
   return (
@@ -15,7 +16,9 @@ const CartMobile = () => {
       <CartTop />
 
       {/* cart items */}
-      <div>
+      <div
+        className={`mr-4 mt-8 flex h-[60vh] flex-col gap-y-4 overflow-y-scroll px-4 py-2 scrollbar-thin scrollbar-thumb-secondary ${cart.length >= 3 ? "scrollbar-track-black/10" : "scrollbar-track-transparent"}`}
+      >
         {cart?.map((pizza, index) => {
           return <CartItem key={index} pizza={pizza} />;
         })}

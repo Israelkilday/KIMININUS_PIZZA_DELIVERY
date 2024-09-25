@@ -9,4 +9,9 @@ export interface CartItemProps {
   size: string;
   crust: string;
   amount: number;
+  description: string;
+  priceSm: number;
+  priceMd: number;
+  priceLg: number;
+  toppings: Topping[];
 }
