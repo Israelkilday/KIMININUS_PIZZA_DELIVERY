@@ -5,7 +5,7 @@ import { PizzaProps } from "../types/pizza";
 
 const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
   return (
-    <div className="select-none bg-pink-100">
+    <div className="select-none">
       <div className="mb-2 flex gap-x-4">
         {/* image */}
         <div className="flex items-center justify-center">
@@ -63,8 +63,27 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
           </div>
         </div>
       </div>
+
       {/* toppings */}
-      <div>toppings</div>
+      <div className="flex flex-wrap items-center gap-3 border-b border-black/10 p-6">
+        <div className="font-semibold">
+          Toppings:
+          {pizza.additionalTopping &&
+            pizza.additionalTopping.length === 0 &&
+            "None"}
+        </div>
+
+        {pizza.additionalTopping &&
+          pizza.additionalTopping.length > 0 &&
+          pizza.additionalTopping.map((topping, index) => (
+            <div
+              className="gradient rounded-full px-3 py-1 text-sm font-medium capitalize leading-none"
+              key={index}
+            >
+              {topping.name}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

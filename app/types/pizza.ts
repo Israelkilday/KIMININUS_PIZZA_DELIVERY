@@ -13,6 +13,7 @@ export interface PizzaType {
   priceMd: number;
   priceLg: number;
   toppings: Topping[];
+  additionalTopping?: Topping[];
   crust?: string;
   size?: string;
   price?: number;
