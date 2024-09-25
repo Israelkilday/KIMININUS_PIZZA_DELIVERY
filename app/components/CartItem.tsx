@@ -57,7 +57,8 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
           {/* price */}
           <div>
             <span className="font-robotoCondensed text-[17px] font-medium">
-              ${(pizza.price * pizza.amount).toFixed(2)}
+              {(pizza.price !== undefined ? pizza.price : 0) *
+                (pizza.amount !== undefined ? pizza.amount : 1)}
             </span>
           </div>
         </div>

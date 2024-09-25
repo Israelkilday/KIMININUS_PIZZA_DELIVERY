@@ -13,10 +13,10 @@ export interface PizzaType {
   priceMd: number;
   priceLg: number;
   toppings: Topping[];
-  crust: string;
-  size: string;
-  price: number;
-  amount: number;
+  crust?: string;
+  size?: string;
+  price?: number;
+  amount?: number;
 }
 
 export interface PizzaProps {
