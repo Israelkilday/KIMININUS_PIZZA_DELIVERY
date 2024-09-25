@@ -10,6 +10,7 @@ import {
   useState,
 } from "react";
 import { Topping } from "../types/pizza";
+import { CartItemProps } from "../types/CartItem";
 
 interface AddToCartFunction {
   (
@@ -21,17 +22,6 @@ interface AddToCartFunction {
     size: string,
     crust: string,
   ): void;
-}
-
-interface CartItemProps {
-  id: number;
-  image: string;
-  name: string;
-  price: number;
-  additionalTopping: Topping[];
-  size: string;
-  crust: string;
-  amount: number;
 }
 
 export interface CartContextType {
@@ -73,6 +63,18 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       crust,
       amount: 1,
     };
+    // const newItem = {
+    //   pizza: {
+    //     id,
+    //     image,
+    //     name,
+    //     price,
+    //     toppings: additionalTopping,
+    //     size: size === "smal" ? 25 : size === "medium" ? 30 : 35,
+    //     crust,
+    //     amount: 1,
+    //   },
+    // };
 
     setCart([...cart, newItem]);
   };

@@ -16,8 +16,8 @@ const CartMobile = () => {
 
       {/* cart items */}
       <div>
-        {cart?.map((pizza) => {
-          return <CartItem key={pizza.id} />;
+        {cart?.map((pizza, index) => {
+          return <CartItem key={index} pizza={pizza} />;
         })}
       </div>
 
