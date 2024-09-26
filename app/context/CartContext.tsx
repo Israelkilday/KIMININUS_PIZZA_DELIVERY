@@ -24,10 +24,15 @@ interface AddToCartFunction {
   ): void;
 }
 
+export interface RemoveItemFunction {
+  (id: number, price: number, crust: string): void;
+}
+
 export interface CartContextType {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   addToCart: AddToCartFunction;
+  removeItem: RemoveItemFunction;
   cart: CartItemProps[];
 }
 
@@ -92,10 +97,25 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     setIsOpen(true);
   };
 
+  // remove item
+  const removeItem: RemoveItemFunction = (id, price, crust) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price && item.crust === crust,
+    );
+
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      newCart.splice(itemIndex, 1);
+      setCart(newCart);
+    }
+  };
+
   console.log(cart);
 
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
+    <CartContext.Provider
+      value={{ isOpen, setIsOpen, addToCart, cart, removeItem }}
+    >
       {children}
     </CartContext.Provider>
   );
