@@ -5,7 +5,7 @@ import { PizzaProps } from "../types/pizza";
 import { useCartContext } from "../context/CartContext";
 
 const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
-  const { removeItem } = useCartContext();
+  const { removeItem, increaseAmount, decreaseAmount } = useCartContext();
 
   return (
     <div className="select-none">
@@ -34,7 +34,10 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
             {/* quantity controls */}
             <div className="flex items-center gap-x-1">
               {/* decrease quantity */}
-              <div className="cursor pointer gradient flex h-[18px] w-[18px] items-center justify-center rounded-full text-white">
+              <div
+                onClick={() => decreaseAmount(pizza.id, pizza.price)}
+                className="gradient flex h-[18px] w-[18px] cursor-pointer items-center justify-center rounded-full text-white"
+              >
                 <BiMinus />
               </div>
 
@@ -44,7 +47,10 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
               </div>
 
               {/* increase quantity */}
-              <div className="cursor pointer gradient flex h-[18px] w-[18px] items-center justify-center rounded-full text-white">
+              <div
+                onClick={() => increaseAmount(pizza.id, pizza.price)}
+                className="gradient flex h-[18px] w-[18px] cursor-pointer items-center justify-center rounded-full text-white"
+              >
                 <BiPlus />
               </div>
             </div>
