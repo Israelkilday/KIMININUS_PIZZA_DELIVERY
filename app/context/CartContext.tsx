@@ -25,7 +25,7 @@ interface AddToCartFunction {
 }
 
 export interface RemoveItemFunction {
-  (id: number, price: number, crust: string): void;
+  (id: number, price?: number, crust?: string): void;
 }
 
 export interface CartContextType {
@@ -110,7 +110,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  console.log(cart);
+  // increase amount
 
   return (
     <CartContext.Provider

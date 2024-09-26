@@ -2,8 +2,11 @@ import Image from "next/image";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { IoCloseOutline } from "react-icons/io5";
 import { PizzaProps } from "../types/pizza";
+import { useCartContext } from "../context/CartContext";
 
 const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
+  const { removeItem } = useCartContext();
+
   return (
     <div className="select-none">
       <div className="mb-2 flex gap-x-4">
@@ -50,7 +53,10 @@ const CartItem: React.FC<PizzaProps> = ({ pizza }) => {
 
         <div className="flex flex-col justify-between">
           {/* remove item */}
-          <div className="flex cursor-pointer items-center justify-center self-end text-2xl text-orange transition-all duration-100 hover:scale-110">
+          <div
+            onClick={() => removeItem(pizza.id, pizza.price, pizza.crust)}
+            className="flex cursor-pointer items-center justify-center self-end text-2xl text-orange transition-all duration-100 hover:scale-110"
+          >
             <IoCloseOutline />
           </div>
 
