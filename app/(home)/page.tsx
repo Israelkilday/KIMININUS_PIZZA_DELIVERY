@@ -380,6 +380,10 @@ export default function Home() {
     <section>
       <Banner />
       <div className="container mx-auto">
+        <h2 className="mt-10 text-center font-bangers text-4xl">
+          Nosso Cardápio de Pizzas
+        </h2>
+
         {/* pizza grid */}
         <div className="grid gap-[15px] py-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:gap-[30px]">
           {pizzas.map((pizza) => {
