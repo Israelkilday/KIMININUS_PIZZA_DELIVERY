@@ -4,5 +4,5 @@ import { PizzaType } from "./pizza";
 export interface PizzaDetailsProps {
   pizza: PizzaType;
   modal?: boolean;
-  setModal?: Dispatch<SetStateAction<boolean>>;
+  setModal: Dispatch<SetStateAction<boolean>>;
 }

@@ -8,7 +8,7 @@ import CrustSelection from "./CrustSelection";
 import Toppings from "./Toppings";
 import { useCartContext } from "../context/CartContext";
 
-const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
+const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
   // pizza size state
   const [size, setSize] = useState("small");
   // pizza crust state
@@ -125,7 +125,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
         {/* add to cart btn */}
         <div className="flex h-full items-center px-2 lg:items-end">
           <button
-            onClick={() =>
+            onClick={() => {
               addToCart(
                 pizza.id,
                 pizza.image,
@@ -134,8 +134,9 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza }) => {
                 additionalTopping,
                 size,
                 crust,
-              )
-            }
+              ),
+                setModal(false);
+            }}
             className="btn btn-lg gradient flex w-full justify-center"
           >
             <div>Add to cart for</div>
