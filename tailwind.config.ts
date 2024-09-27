@@ -49,9 +49,16 @@ const config: Config = {
             transform: "translateY(0) rotate(360deg)",
           },
         },
+        slide: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         rotation: "rotation .8s ease-in-out",
+        slide: "slide .5s ease-in-out",
       },
     },
   },

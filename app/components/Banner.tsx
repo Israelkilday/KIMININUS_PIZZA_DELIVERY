@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import "animate.css";
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
@@ -23,7 +24,7 @@ const Banner = () => {
                   Melhor pizza da cidade
                 </div> */}
 
-                <h1 className="mt-20 font-bangers text-6xl drop-shadow-md lg:text-8xl">
+                <h1 className="mt-20 animate-slide font-bangers text-6xl drop-shadow-md lg:text-8xl">
                   O melhor da pizza,
                   <br /> sem sair de casa!
                 </h1>
