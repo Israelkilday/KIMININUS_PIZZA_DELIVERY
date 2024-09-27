@@ -42,8 +42,19 @@ const config: Config = {
         "pos-0": "0% 0%",
         "pos-100": "100% 100%",
       },
+      keyframes: {
+        rotation: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": {
+            transform: "translateY(0) rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        rotation: "rotation .8s ease-in-out",
+      },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar"), "tailwindcss-animate"],
 };
 export default config;

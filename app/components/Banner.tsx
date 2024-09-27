@@ -19,9 +19,9 @@ const Banner = () => {
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
             <div className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
               <div className="flex-1">
-                <div className="mt-14 hidden font-bangers text-[32px] uppercase text-white lg:flex">
+                {/* <div className="mt-14 hidden font-bangers text-[32px] uppercase text-white lg:flex">
                   Melhor pizza da cidade
-                </div>
+                </div> */}
 
                 <h1 className="mt-20 font-bangers text-6xl drop-shadow-md lg:text-8xl">
                   O melhor da pizza,
@@ -35,7 +35,7 @@ const Banner = () => {
           <MouseParallaxChild factorX={0.2} factorY={0.3} className="relative">
             {/*pizza image */}
             <div className="flex flex-1 flex-col items-center px-6 text-center lg:flex-row lg:text-left">
-              <div className="flex max-w-sm flex-1 justify-end lg:max-w-max">
+              <div className="flex max-w-sm flex-1 animate-rotation justify-end lg:max-w-max">
                 <Image
                   src={"/pizza-banner.png"}
                   width={440}
