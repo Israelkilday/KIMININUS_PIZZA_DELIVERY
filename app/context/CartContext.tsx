@@ -7,6 +7,7 @@ import {
   ReactNode,
   SetStateAction,
   useContext,
+  useEffect,
   useState,
 } from "react";
 import { Topping } from "../types/pizza";
@@ -36,6 +37,8 @@ export interface CartContextType {
   increaseAmount: ModifyCartItemFunction;
   decreaseAmount: ModifyCartItemFunction;
   cart: CartItemProps[];
+  itemAmount: number;
+  cartTotal: number;
 }
 
 export const CartContext = createContext<CartContextType | null>(null);
@@ -43,9 +46,28 @@ export const CartContext = createContext<CartContextType | null>(null);
 const CartProvider = ({ children }: { children: ReactNode }) => {
   // cart open state
   const [isOpen, setIsOpen] = useState(false);
-
   // cart state
   const [cart, setCart] = useState<CartItemProps[]>([]);
+  // cart total state
+  const [cartTotal, setCartTotal] = useState(0);
+  // item amount state
+  const [itemAmount, setItemAmount] = useState(0);
+
+  // update item amount
+  useEffect(() => {
+    const amount = cart.reduce((a, c) => {
+      return a + c.amount;
+    }, 0);
+    setItemAmount(amount);
+  }, [cart]);
+
+  // update cart total price
+  useEffect(() => {
+    const price = cart.reduce((a, c) => {
+      return a + Number(c.price) * c.amount;
+    }, 0);
+    setCartTotal(price);
+  }, [cart]);
 
   // add to cart
   const addToCart: AddToCartFunction = (
@@ -150,6 +172,8 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         removeItem,
         increaseAmount,
         decreaseAmount,
+        itemAmount,
+        cartTotal,
       }}
     >
       {children}

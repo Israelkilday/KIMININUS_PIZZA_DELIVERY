@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCartContext } from "../context/CartContext";
 
 const Nav = () => {
-  const { isOpen, setIsOpen } = useCartContext();
+  const { isOpen, setIsOpen, itemAmount } = useCartContext();
 
   return (
     <nav className="absolute w-full py-8">
@@ -43,7 +43,7 @@ const Nav = () => {
 
             {/* amount */}
             <div className="absolute -bottom-2 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-tertiary font-robotoCondensed text-[13px] text-white">
-              3
+              {itemAmount}
             </div>
           </div>
         </div>

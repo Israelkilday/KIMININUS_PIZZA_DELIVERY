@@ -14,7 +14,7 @@ const modalStyles = {
 };
 
 const CartBottom = () => {
-  const { setIsOpen, cart } = useCartContext();
+  const { setIsOpen, cart, cartTotal } = useCartContext();
   //   modal state
   const [modal, setModal] = useState(false);
 
@@ -35,7 +35,7 @@ const CartBottom = () => {
           {/* total price */}
           <div className="mb-6 flex items-center justify-between font-robotoCondensed text-lg font-semibold">
             <div>Total</div>
-            <div>$320</div>
+            <div>${cartTotal.toFixed(2)}</div>
           </div>
 
           {/* btn */}
