@@ -37,6 +37,7 @@ export interface CartContextType {
   increaseAmount: ModifyCartItemFunction;
   decreaseAmount: ModifyCartItemFunction;
   cart: CartItemProps[];
+  setCart: Dispatch<SetStateAction<CartItemProps[]>>;
   itemAmount: number;
   cartTotal: number;
 }
@@ -169,6 +170,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         setIsOpen,
         addToCart,
         cart,
+        setCart,
         removeItem,
         increaseAmount,
         decreaseAmount,
