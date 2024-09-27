@@ -2,12 +2,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useCartContext } from "../context/CartContext";
 
 const CartTop = () => {
-  const { setIsOpen } = useCartContext();
+  const { setIsOpen, itemAmount } = useCartContext();
 
   return (
     <div className="flex h-20 w-full items-center justify-between border-b px-10">
       {/* shoping bag text */}
-      <div className="font-semibold">Shoping Bag(3) </div>
+      <div className="font-semibold">Shoping Bag({itemAmount}) </div>
 
       {/* close icon */}
       <div onClick={() => setIsOpen(false)} className="group cursor-pointer">
