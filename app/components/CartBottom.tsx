@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCartContext } from "../context/CartContext";
 import Modal from "react-modal";
 import { IoCloseOutline } from "react-icons/io5";
+// import CheckoutDetails from "./CheckoutDetails";
 
 // blind modal to body
 Modal.setAppElement("body");
@@ -73,7 +74,7 @@ const CartBottom = () => {
             <IoCloseOutline className="text-4xl text-orange" />
           </div>
 
-          {/* <CheckoutDetails /> */}
+          {/* <CheckoutDetails setModal={setModal} /> */}
         </Modal>
       )}
     </>
