@@ -9,12 +9,15 @@ const Nav = () => {
 
   return (
     <nav className="absolute w-full py-8">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-y-3 lg:flex-row">
+      <div className="container mx-auto mb-10 flex flex-col items-center justify-between gap-y-3 lg:flex-row">
         {/* logo */}
-        <Link href="#" className="max-w-[160px] lg:max-w-max">
-          <h2 className="font-bangers text-4xl uppercase text-white">
-            kimi<span className="text-yellow-300">ninus</span>
+        <Link href="/" className="max-w-[160px] lg:max-w-max">
+          <h2 className="text-left font-bangers text-5xl uppercase text-white">
+            kimi<span className="text-yellow-300">ninu&apos;s</span>
           </h2>
+          <p className="mb-1 text-center font-robotoCondensed text-lg uppercase text-white">
+            pizzaria - delivery
+          </p>
         </Link>
 
         {/* phone & cart */}
@@ -25,12 +28,10 @@ const Nav = () => {
           </div>
 
           <div className="text-white">
-            <div className="font-robotoCondensed text-sm font-medium uppercase leading-none">
-              24/7 Pizza delivery service
-            </div>
+            <div className="font-robotoCondensed text-sm font-medium uppercase leading-none"></div>
 
             <div className="font-robotoCondensed text-3xl font-extrabold leading-none tracking-wide">
-              920 234 5768
+              (85) 98990-8470
             </div>
           </div>
 

@@ -19,12 +19,13 @@ const Banner = () => {
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
             <div className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
               <div className="flex-1">
-                <div className="font-bangers text-[32px] uppercase text-white">
-                  Best pizza in town
+                <div className="mt-14 hidden font-bangers text-[32px] uppercase text-white lg:flex">
+                  Melhor pizza da cidade
                 </div>
 
-                <h1 className="font-bangers text-6xl drop-shadow-md lg:text-8xl">
-                  Pizza perfection <br /> in every bite
+                <h1 className="mt-20 font-bangers text-6xl drop-shadow-md lg:text-8xl">
+                  O melhor da pizza,
+                  <br /> sem sair de casa!
                 </h1>
               </div>
             </div>
