@@ -14,7 +14,7 @@ const Banner = () => {
         <MouseParallaxContainer
           globalFactorX={0.4}
           globalFactorY={0.3}
-          className="flex w-full flex-col items-center justify-between lg:h-[660px] lg:flex-row"
+          className="flex w-full flex-col items-center justify-between lg:h-[670px] lg:flex-row"
         >
           {/* text */}
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
@@ -24,7 +24,7 @@ const Banner = () => {
                   Melhor pizza da cidade
                 </div> */}
 
-                <h1 className="mt-20 animate-slide font-bangers text-6xl drop-shadow-md md:mt-10 lg:mt-0 lg:text-8xl">
+                <h1 className="mt-20 animate-slide font-bangers text-6xl drop-shadow-md md:mt-10 lg:mt-0 lg:text-[90px]">
                   O melhor da pizza,
                   <br /> sem sair de casa!
                 </h1>
