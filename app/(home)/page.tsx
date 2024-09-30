@@ -1,3 +1,4 @@
+import About from "../components/About";
 import Banner from "../components/Banner";
 import Pizza from "../components/Pizza";
 
@@ -391,6 +392,8 @@ export default function Home() {
           })}
         </div>
       </div>
+
+      <About />
     </section>
   );
 }
