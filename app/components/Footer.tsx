@@ -61,6 +61,14 @@ const Footer = () => {
             </a>
           </div>
 
+          <div className="flex flex-col gap-y-3">
+            <h2 className="font-bold uppercase text-white">Sede</h2>
+
+            <p>Rua: Seixas Correia 642</p>
+            <p>Fortaleza CE</p>
+            <p></p>
+          </div>
+
           {/* copyright */}
           <div className="text-center font-medium text-white">
             Copiright &copy; Israel Kilday 2024. Todos os direitos Reservados.
