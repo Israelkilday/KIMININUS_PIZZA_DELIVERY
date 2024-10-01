@@ -5,17 +5,17 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <main className="relative mt-8 h-screen w-full pt-4 md:pt-12 lg:pt-2">
+    <main className="relative mt-8 h-screen w-full pt-4 md:pt-12 lg:mt-4 lg:pt-0">
       <Image
         alt="Agende nos melhores com FSW Barber"
         src="/banner-about.jpg"
         fill
         priority
         quality={100}
-        className="object-cover brightness-50"
+        className="object-cover brightness-75"
       />
 
-      <div className="absolute flex flex-col px-6 py-12 md:w-8/12 lg:w-1/2">
+      <div className="absolute flex flex-col px-6 py-12 md:w-8/12 lg:w-1/2 lg:px-14 lg:py-8">
         <h2 className="mb-6 text-center font-bangers text-4xl text-white md:text-left">
           {" "}
           Sobre Nós
