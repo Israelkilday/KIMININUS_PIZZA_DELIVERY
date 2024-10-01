@@ -8,33 +8,57 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary bg-pattern py-16">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-center gap-y-6">
+    <footer className="bg-primary bg-pattern px-2 py-10">
+      <div className="container">
+        <div className="flex flex-col gap-y-4">
           {/* logo */}
           <Link href="/" className="max-w-[160px] lg:max-w-max">
-            <h2 className="font-bangers text-4xl uppercase text-white">
-              kimi<span className="text-yellow-300">ninus</span>
+            <h2 className="text-left font-bangers text-4xl uppercase text-white">
+              kimi<span className="text-yellow-300">ninu&apos;s</span>
             </h2>
+
+            <p className="mb-1 font-robotoCondensed uppercase text-white">
+              pizzaria - delivery
+            </p>
           </Link>
 
           {/* social icons */}
           <div className="flex gap-x-6 text-xl text-white">
-            <Link href={"#"}>
-              <FaYoutube />
-            </Link>
+            <a
+              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-150 hover:text-yellow-400"
+            >
+              <FaYoutube className="size-9" />
+            </a>
 
-            <Link href={"#"}>
-              <FaFacebook />
-            </Link>
+            <a
+              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-150 hover:text-yellow-400"
+            >
+              <FaFacebook className="size-8" />
+            </a>
 
-            <Link href={"#"}>
-              <FaInstagram />
-            </Link>
+            <a
+              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-150 hover:text-yellow-400"
+            >
+              <FaInstagram className="size-8" />
+            </a>
 
-            <Link href={"#"}>
-              <FaPinterest />
-            </Link>
+            <a
+              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="duration-150 hover:text-yellow-400"
+            >
+              <FaPinterest className="size-8" />
+            </a>
           </div>
 
           {/* copyright */}

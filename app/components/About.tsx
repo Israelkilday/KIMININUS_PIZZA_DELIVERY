@@ -5,7 +5,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <main className="relative mt-8 h-screen w-full md:pt-12 lg:pt-2">
+    <main className="relative mt-8 h-screen w-full pt-4 md:pt-12 lg:pt-2">
       <Image
         alt="Agende nos melhores com FSW Barber"
         src="/banner-about.jpg"
@@ -37,7 +37,7 @@ const About = () => {
             <ul className="flex flex-col gap-y-4">
               <li>
                 <p className="flex items-center gap-2 font-medium text-white">
-                  <FaPizzaSlice className="bg-gradient text-yellow-400 md:size-6" />
+                  <FaPizzaSlice className="bg-gradient size-11 text-yellow-400 md:size-6" />
                   Variedade: pizzas clássicas e especiais que agradam todos os
                   paladares.
                 </p>
