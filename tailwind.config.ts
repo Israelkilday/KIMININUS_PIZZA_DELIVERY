@@ -24,6 +24,7 @@ const config: Config = {
         bangers: [`var(--font-bangers)`, "sans-serif"],
         quicksand: [`var(--font-quicksand)`, "sans-serif"],
         robotoCondensed: [`var(--font-robotoCondensed)`, "sans-serif"],
+        logoGuys: "var(--font-orbitron)",
       },
       colors: {
         primary: "#d1411e",

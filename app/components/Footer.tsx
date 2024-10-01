@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaPinterest,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -23,55 +18,75 @@ const Footer = () => {
           </Link>
 
           {/* social icons */}
-          <div className="flex gap-x-6 text-xl text-white">
-            <a
-              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="duration-150 hover:text-yellow-400"
-            >
-              <FaYoutube className="size-9" />
-            </a>
+          <ul className="flex gap-x-6 text-xl text-white">
+            <li>
+              <Link href="/" className="duration-150 hover:text-yellow-400">
+                <FaYoutube className="size-9" />
+              </Link>
+            </li>
 
-            <a
-              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="duration-150 hover:text-yellow-400"
-            >
-              <FaFacebook className="size-8" />
-            </a>
+            <li>
+              <Link href="/" className="duration-150 hover:text-yellow-400">
+                <FaFacebook className="size-8" />
+              </Link>
+            </li>
 
-            <a
-              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="duration-150 hover:text-yellow-400"
-            >
-              <FaInstagram className="size-8" />
-            </a>
+            <li>
+              <a
+                href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="duration-150 hover:text-yellow-400"
+              >
+                <FaInstagram className="size-8" />
+              </a>
+            </li>
 
-            <a
-              href="https://www.instagram.com/kimininus_pizzaria_delivery/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="duration-150 hover:text-yellow-400"
-            >
-              <FaPinterest className="size-8" />
-            </a>
-          </div>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send?phone=5585989908470"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="duration-150 hover:text-yellow-400"
+              >
+                <FaWhatsapp className="size-8" />
+              </a>
+            </li>
+          </ul>
 
-          <div className="flex flex-col gap-y-3">
-            <h2 className="font-bold uppercase text-white">Sede</h2>
+          <div className="flex flex-col gap-y-1 text-white">
+            <h2 className="font-robotoCondensed text-lg font-semibold uppercase">
+              Sede
+            </h2>
 
             <p>Rua: Seixas Correia 642</p>
             <p>Fortaleza CE</p>
-            <p></p>
+            <p>60520-795</p>
+          </div>
+
+          <div className="flex flex-col gap-y-1 text-white">
+            <h2 className="font-robotoCondensed text-lg font-semibold uppercase">
+              Funcionamento
+            </h2>
+
+            <p>De quarta a segunda-feira</p>
+            <p>Horário: 18:00 às 23:00</p>
           </div>
 
           {/* copyright */}
-          <div className="text-center font-medium text-white">
-            Copiright &copy; Israel Kilday 2024. Todos os direitos Reservados.
+          <div className="border-t pt-4 text-left font-medium text-white">
+            <a
+              href="https://portfolioikdev-zeta-nine.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Copyright: &copy;{" "}
+              <span className="font-logoGuys duration-150 hover:text-yellow-400">
+                Israel Kilday
+              </span>{" "}
+            </a>
+            2024.
+            <br /> Todos os direitos Reservados.
           </div>
         </div>
       </div>

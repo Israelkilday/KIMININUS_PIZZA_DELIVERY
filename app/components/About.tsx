@@ -12,7 +12,7 @@ const About = () => {
         fill
         priority
         quality={100}
-        className="object-cover brightness-75"
+        className="object-cover brightness-50"
       />
 
       <div className="absolute flex flex-col px-6 py-12 md:w-8/12 lg:w-1/2 lg:px-14 lg:py-8">
