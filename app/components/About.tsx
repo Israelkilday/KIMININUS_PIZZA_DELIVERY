@@ -5,7 +5,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <main className="relative mt-8 h-screen w-full pt-4 md:pt-12 lg:mt-4 lg:pt-0">
+    <main className="relative h-screen w-full pt-4 md:pt-12 lg:mt-4 lg:pt-0">
       <Image
         alt="Agende nos melhores com FSW Barber"
         src="/banner-about.jpg"

@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary bg-pattern px-2 py-10">
+    <footer className="bg-primary bg-pattern px-2 py-10 lg:pt-14">
       <div className="container">
         <div className="flex flex-col justify-between gap-y-4 lg:flex-row">
           <div className="mb-2 flex flex-col gap-y-4 lg:flex-row lg:gap-36">
@@ -65,7 +65,7 @@ const Footer = () => {
             <p>Horário: 18:00 às 23:00</p>
           </div>
 
-          <div className="flex flex-col gap-y-1 text-white">
+          <div className="flex flex-col gap-y-1 text-white lg:pb-2">
             <h2 className="font-robotoCondensed text-lg font-semibold uppercase">
               Sede
             </h2>
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* copyright */}
-        <div className="mt-4 border-t pt-4 text-left font-medium text-white">
+        <div className="mt-4 border-t pt-4 text-left font-medium text-white lg:pt-6">
           <a
             href="https://portfolioikdev-zeta-nine.vercel.app/"
             target="_blank"
