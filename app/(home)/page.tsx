@@ -80,13 +80,13 @@ const pizzas = [
   },
   {
     id: 3,
-    name: "hawaii",
+    name: "Mista",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "A combinação clássica de mussarela, tomate e manjericão ganha um toque especial com o presunto parma e a rúcula, criando uma sinfonia de sabores que vai te conquistar",
     image: "/hawaii.webp",
-    priceSm: 10.99,
-    priceMd: 11.99,
-    priceLg: 12.99,
+    priceSm: 17.99,
+    priceMd: 21.99,
+    priceLg: 25.99,
     toppings: [
       {
         image: "/cherry.png",
