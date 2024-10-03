@@ -6,9 +6,9 @@ import Pizza from "../components/Pizza";
 const pizzas = [
   {
     id: 1,
-    name: "capricciosa",
+    name: "Dom Carmelo",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "molho de tomate artesanal, calabresa suculenta, presunto fatiado, cebola, mussarela derretida e um toque de orégano. Uma combinação robusta e cheia de sabor para quem gosta de intensidade",
     image: "/capricciosa.webp",
     priceSm: 9.99,
     priceMd: 10.99,
@@ -43,9 +43,9 @@ const pizzas = [
   },
   {
     id: 2,
-    name: "cheesy",
+    name: "Mussarela",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Deliciosa pizza de mussarela com molho de tomate fresco, generosas camadas de mussarela derretida, fatias de tomate suculento e um toque especial de orégano.",
     image: "/cheesy.webp",
     priceSm: 10.99,
     priceMd: 11.99,
@@ -117,9 +117,9 @@ const pizzas = [
   },
   {
     id: 4,
-    name: "italian",
+    name: "Calabresa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Molho de tomate artesanal, fatias de calabresa bem temperada, mussarela derretida, cebola fresca e orégano.  Uma escolha saborosa e marcante para quem aprecia sabores intensos.",
     image: "/italian.webp",
     priceSm: 11.99,
     priceMd: 12.99,
@@ -156,7 +156,7 @@ const pizzas = [
     id: 5,
     name: "margherita",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Molho de tomate fresco, mussarela cremosa, parmesão gratinado, fatias de tomate maduro e um toque de orégano. Uma combinação clássica e leve que agrada todos os gostos.",
     image: "/margherita.webp",
     priceSm: 9.99,
     priceMd: 10.99,
@@ -193,7 +193,7 @@ const pizzas = [
     id: 6,
     name: "pepperoni",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "molho de tomate fresco, generosas fatias de pepperoni levemente picante, mussarela derretida e um toque de orégano. Uma escolha clássica e irresistível.",
     image: "/pepperoni.webp",
     priceSm: 10.99,
     priceMd: 11.99,
@@ -228,9 +228,9 @@ const pizzas = [
   },
   {
     id: 7,
-    name: "quattro formaggi",
+    name: "Frango",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Molho de tomate saboroso, pedaços suculentos de frango desfiado, mussarela derretida, milho crocante e orégano. Uma opção deliciosa e equilibrada para quem busca algo especial.",
     image: "/quattro-formaggi.webp",
     priceSm: 12.99,
     priceMd: 13.99,
@@ -265,9 +265,9 @@ const pizzas = [
   },
   {
     id: 8,
-    name: "quattro stagioni",
+    name: "A moda da casa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Molho de tomate especial, frango desfiado, calabresa, mussarela derretida, cebola, ervilha, pimentão e um toque de orégano. Uma combinação única e irresistível.",
     image: "/quattro-stagioni.webp",
     priceSm: 11.99,
     priceMd: 12.99,
@@ -302,9 +302,9 @@ const pizzas = [
   },
   {
     id: 9,
-    name: "tonno",
+    name: "Portuguesa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "Molho de tomate caseiro, presunto fatiado, cebola fresca, ovo cozido, ervilha, mussarela derretida e um toque de orégano. Uma mistura rica e tradicional que agrada a todos.",
     image: "/tonno.webp",
     priceSm: 10.99,
     priceMd: 11.99,
@@ -339,9 +339,9 @@ const pizzas = [
   },
   {
     id: 10,
-    name: "vegetarian",
+    name: "Vegetariana",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.",
+      "molho de tomate artesanal, uma generosa camada de mussarela, pimentões coloridos, cebola roxa, tomate fresco, brócolis e ervilhas, finalizada com um toque de orégano.",
     image: "/vegetarian.webp",
     priceSm: 9.99,
     priceMd: 10.99,
@@ -380,6 +380,7 @@ export default function Home() {
   return (
     <section>
       <Banner />
+
       <div className="container mx-auto">
         <h2 className="mt-10 text-center font-bangers text-4xl">
           Nosso Cardápio de Pizzas
