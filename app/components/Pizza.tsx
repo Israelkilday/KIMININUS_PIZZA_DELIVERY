@@ -48,15 +48,13 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
       </div>
 
       {/* description */}
-      <div className="mb-6 min-h-[60px] text-sm font-medium">
-        {pizza.description}
-      </div>
+      <div className="mb-6 min-h-[60px] font-medium">{pizza.description}</div>
 
       {/* price & btn  */}
       <div className="mb-6 flex items-center justify-between">
         {/* price -> hidden (sm) - visible (lg) */}
         <div className="hidden text-xl font-semibold lg:flex">
-          stars at {pizza.priceSm}
+          Apartir de {pizza.priceSm}
         </div>
 
         {/* btn -> hidden (sm) - visible (lg) */}
@@ -72,7 +70,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
           onClick={openModal}
           className="btn btn-sm gradient px-3 text-sm lg:hidden"
         >
-          starts at {pizza.priceSm}
+          Apartir de {pizza.priceSm}
         </button>
       </div>
 
