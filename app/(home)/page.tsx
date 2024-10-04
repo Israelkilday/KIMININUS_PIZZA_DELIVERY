@@ -8,7 +8,7 @@ const pizzas = [
     id: 1,
     name: "Dom Carmelo",
     description:
-      "Molho de tomate artesanal, calabresa suculenta, presunto fatiado, cebola, mussarela derretida e um toque de orégano. Uma combinação robusta e cheia de sabor para quem gosta de intensidade",
+      "Molho de tomate artesanal, calabresa suculenta, presunto fatiado, cebola, mussarela derretida e um toque de orégano.",
     image: "/capricciosa.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -45,7 +45,7 @@ const pizzas = [
     id: 2,
     name: "Mussarela",
     description:
-      "Deliciosa pizza de mussarela com molho de tomate fresco, generosas camadas de mussarela derretida, fatias de tomate suculento e um toque especial de orégano.",
+      "Deliciosa pizza de mussarela com molho de tomate fresco, generosas camadas de mussarela derretida, fatias de tomate e orégano.",
     image: "/cheesy.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -82,7 +82,7 @@ const pizzas = [
     id: 3,
     name: "Mista",
     description:
-      "A combinação clássica de mussarela, tomate e manjericão ganha um toque especial com o presunto parma e a rúcula, criando uma sinfonia de sabores que vai te conquistar",
+      "A combinação clássica de mussarela, tomate e manjericão ganha um toque especial com o presunto parma e a rúcula.",
     image: "/hawaii.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -119,7 +119,7 @@ const pizzas = [
     id: 4,
     name: "Calabresa",
     description:
-      "Molho de tomate artesanal, fatias de calabresa bem temperada, mussarela derretida, cebola fresca e orégano.  Uma escolha saborosa e marcante para quem aprecia sabores intensos.",
+      "Molho de tomate artesanal, fatias de calabresa bem temperada, mussarela derretida, cebola fresca e orégano.",
     image: "/italian.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -156,7 +156,7 @@ const pizzas = [
     id: 5,
     name: "margherita",
     description:
-      "Molho de tomate fresco, mussarela cremosa, parmesão gratinado, fatias de tomate maduro e um toque de orégano. Uma combinação clássica e leve que agrada todos os gostos.",
+      "Molho de tomate fresco, mussarela cremosa, parmesão gratinado, fatias de tomate maduro e um toque de orégano.",
     image: "/margherita.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -193,7 +193,7 @@ const pizzas = [
     id: 6,
     name: "Pepperoni",
     description:
-      "Molho de tomate fresco, generosas fatias de pepperoni levemente picante, mussarela derretida e um toque de orégano. Uma escolha clássica e irresistível.",
+      "Molho de tomate fresco, generosas fatias de pepperoni levemente picante, mussarela derretida e um toque de orégano.",
     image: "/pepperoni.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -230,7 +230,7 @@ const pizzas = [
     id: 7,
     name: "Frango",
     description:
-      "Molho de tomate saboroso, pedaços suculentos de frango desfiado, mussarela derretida, milho crocante e orégano. Uma opção deliciosa e equilibrada para quem busca algo especial.",
+      "Molho de tomate saboroso, pedaços suculentos de frango desfiado, mussarela derretida, milho crocante e orégano.",
     image: "/quattro-formaggi.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -267,7 +267,7 @@ const pizzas = [
     id: 8,
     name: "A moda da casa",
     description:
-      "Molho de tomate especial, frango desfiado, calabresa, mussarela derretida, cebola, ervilha, pimentão e um toque de orégano. Uma combinação única e irresistível.",
+      "Molho de tomate especial, frango desfiado, calabresa, mussarela derretida, cebola, ervilha, pimentão e um toque de orégano.",
     image: "/quattro-stagioni.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -304,7 +304,7 @@ const pizzas = [
     id: 9,
     name: "Portuguesa",
     description:
-      "Molho de tomate caseiro, presunto fatiado, cebola fresca, ovo cozido, ervilha, mussarela derretida e um toque de orégano. Uma mistura rica e tradicional que agrada a todos.",
+      "Molho de tomate caseiro, presunto fatiado, cebola fresca, ovo cozido, ervilha, mussarela derretida e um toque de orégano.",
     image: "/tonno.webp",
     priceSm: 17.99,
     priceMd: 21.99,
@@ -341,7 +341,7 @@ const pizzas = [
     id: 10,
     name: "Vegetariana",
     description:
-      "molho de tomate artesanal, uma generosa camada de mussarela, pimentões coloridos, cebola roxa, tomate fresco, brócolis e ervilhas, finalizada com um toque de orégano.",
+      "molho de tomate artesanal, uma generosa camada de mussarela, pimentões coloridos, cebola roxa, tomate fresco, brócolis e ervilhas.",
     image: "/vegetarian.webp",
     priceSm: 17.99,
     priceMd: 21.99,

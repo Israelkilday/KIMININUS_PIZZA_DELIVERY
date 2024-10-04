@@ -53,24 +53,16 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
       {/* price & btn  */}
       <div className="mb-6 flex items-center justify-between">
         {/* price -> hidden (sm) - visible (lg) */}
-        <div className="hidden text-xl font-semibold lg:flex">
-          Apartir de {pizza.priceSm}
+        <div className="flex font-semibold lg:text-xl">
+          Pizza Grande R$ 25.99
         </div>
 
         {/* btn -> hidden (sm) - visible (lg) */}
         <button
           onClick={openModal}
-          className="gradient btn-sm hidden rounded-lg font-semibold text-white lg:flex"
+          className="gradient btn-sm flex rounded-lg font-semibold text-white"
         >
-          Choose
-        </button>
-
-        {/*btn -> visible (sm) -hidden (lg)  */}
-        <button
-          onClick={openModal}
-          className="btn btn-sm gradient px-3 text-sm lg:hidden"
-        >
-          Apartir de {pizza.priceSm}
+          Escolher
         </button>
       </div>
 
