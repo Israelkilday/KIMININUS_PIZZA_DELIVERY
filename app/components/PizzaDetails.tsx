@@ -84,11 +84,11 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
               {/* size & crust text */}
               <div className="mb-6 text-lg font-medium">
                 <span>
-                  {size === "Pequena"
+                  {size === "small"
                     ? "25 cm"
-                    : size === "Media"
+                    : size === "medium"
                       ? "30 cm"
-                      : size === "Grande"
+                      : size === "large"
                         ? "35 cm"
                         : null}
                 </span>
