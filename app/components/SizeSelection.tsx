@@ -28,7 +28,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />
-          Small
+          Pequena
         </label>
 
         {/* mediun */}
@@ -48,7 +48,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />
-          Medium
+          Media
         </label>
 
         {/* large */}
@@ -68,7 +68,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />
-          Large
+          Grande
         </label>
       </div>
     </div>

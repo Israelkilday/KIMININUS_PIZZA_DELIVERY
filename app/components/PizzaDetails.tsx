@@ -10,9 +10,9 @@ import { useCartContext } from "../context/CartContext";
 
 const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
   // pizza size state
-  const [size, setSize] = useState("small");
+  const [size, setSize] = useState("large");
   // pizza crust state
-  const [crust, setCrust] = useState("traditional");
+  const [crust, setCrust] = useState("tradicional");
   // pizza topping state
   const [additionalTopping, setAdditionalTopping] = useState<Topping[]>([]);
   // pizza topping price
@@ -84,16 +84,16 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
               {/* size & crust text */}
               <div className="mb-6 text-lg font-medium">
                 <span>
-                  {size === "small"
+                  {size === "Pequena"
                     ? "25 cm"
-                    : size === "medium"
+                    : size === "Media"
                       ? "30 cm"
-                      : size === "large"
+                      : size === "Grande"
                         ? "35 cm"
                         : null}
                 </span>
 
-                <span>, {crust} crust</span>
+                <span>, Crosta {crust}</span>
               </div>
             </div>
 
@@ -104,7 +104,9 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
             <CrustSelection crust={crust} setCrust={setCrust} />
 
             {/* toppings */}
-            <div className="mb-4 text-xl font-semibold">Chosse Toppings</div>
+            <div className="mb-4 text-xl font-semibold">
+              Escolher acompanhamento:
+            </div>
 
             {/* topping list */}
             <div className="flex flex-1 flex-wrap justify-center gap-2 py-1 lg:justify-start">

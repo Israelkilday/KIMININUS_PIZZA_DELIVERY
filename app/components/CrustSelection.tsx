@@ -9,24 +9,24 @@ const CrustSelection: React.FC<CrustSelectionProps> = ({ crust, setCrust }) => {
           <input
             type="radio"
             name="crust"
-            value="traditional"
-            checked={crust === "traditional"}
+            value="Tradicional"
+            checked={crust === "Tradicional"}
             onChange={(e) => setCrust(e.target.value)}
             className="h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-400 checked:border-secondary checked:bg-gradient-to-r checked:from-primary checked:to-secondary"
           />
-          Traditional
+          Tradicional
         </label>
 
         <label className="flex cursor-pointer items-center gap-x-2">
           <input
             type="radio"
             name="crust"
-            value="thin"
-            checked={crust === "thin"}
+            value="Fina"
+            checked={crust === "Fina"}
             onChange={(e) => setCrust(e.target.value)}
             className="h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-400 checked:border-secondary checked:bg-gradient-to-r checked:from-primary checked:to-secondary"
           />
-          Thin
+          Fina
         </label>
       </div>
     </div>
