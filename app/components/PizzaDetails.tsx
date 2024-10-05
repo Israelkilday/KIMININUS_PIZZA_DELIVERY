@@ -141,8 +141,8 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
             }}
             className="btn btn-lg gradient flex w-full justify-center"
           >
-            <div>Add to cart for</div>
-            <div>$ {price}</div>
+            <div>Adicionar ao carrinho&nbsp; </div>
+            <div> $ {price}</div>
           </button>
         </div>
       </div>
