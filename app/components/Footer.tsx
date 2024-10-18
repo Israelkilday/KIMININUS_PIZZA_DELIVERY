@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary bg-pattern px-2 py-10 lg:pt-14">
       <div className="container">
-        <div className="flex flex-col justify-between gap-y-4 lg:flex-row">
-          <div className="mb-2 flex flex-col gap-y-4 lg:flex-row lg:gap-36">
+        <div className="flex flex-col justify-around gap-y-4 lg:flex-row">
+          <div className="mb-2 flex flex-col gap-y-4 lg:flex-row lg:gap-x-28">
             {/* logo */}
             <Link href="/" className="max-w-[160px] lg:max-w-max">
               <h2 className="text-left font-bangers text-5xl uppercase text-white">
@@ -19,41 +19,47 @@ const Footer = () => {
             </Link>
 
             {/* social icons */}
-            <ul className="flex gap-x-6 text-xl text-white lg:pt-6">
-              <li>
-                <Link href="/" className="duration-150 hover:text-yellow-400">
-                  <FaYoutube className="size-9" />
-                </Link>
-              </li>
+            <section>
+              <h3 className="font-semi-bold text-white">
+                Nos siga nas nossas redes sociais
+              </h3>
 
-              <li>
-                <Link href="/" className="duration-150 hover:text-yellow-400">
-                  <FaFacebook className="size-8" />
-                </Link>
-              </li>
+              <ul className="flex gap-x-6 pt-3 text-xl text-white">
+                <li>
+                  <Link href="/" className="duration-150 hover:text-yellow-400">
+                    <FaYoutube className="size-9" />
+                  </Link>
+                </li>
 
-              <li>
-                <a
-                  href="https://www.instagram.com/kimininus_pizzaria_delivery/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="duration-150 hover:text-yellow-400"
-                >
-                  <FaInstagram className="size-8" />
-                </a>
-              </li>
+                <li>
+                  <Link href="/" className="duration-150 hover:text-yellow-400">
+                    <FaFacebook className="size-8" />
+                  </Link>
+                </li>
 
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5585989908470"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="duration-150 hover:text-yellow-400"
-                >
-                  <FaWhatsapp className="size-8" />
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/kimininus_pizzaria_delivery/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="duration-150 hover:text-yellow-400"
+                  >
+                    <FaInstagram className="size-8" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5585989908470"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="duration-150 hover:text-yellow-400"
+                  >
+                    <FaWhatsapp className="size-8" />
+                  </a>
+                </li>
+              </ul>
+            </section>
           </div>
 
           <div className="flex flex-col gap-y-1 text-white">
