@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 100;
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+@layer base {
+  body {
+    @apply text-black;
+  }
+  .btn {
+    @apply rounded-xl font-semibold transition-all;
+  }
+  .btn-sm {
+    @apply px-6 py-3;
+  }
+  .btn-lg {
+    @apply px-6 py-4;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+  .input {
+    @apply px-6 py-4;
+  }
+  .textarea {
+    @apply resize-none px-6 py-4;
+  }
+  .input,
+  .textarea {
+    @apply rounded-lg border font-semibold outline-1 transition-all duration-100 placeholder:text-[15px] placeholder:font-semibold placeholder:text-[#767676] focus:outline-double focus:outline-orange;
+  }
+  .gradient {
+    @apply bg-gradient-to-r from-primary via-orange to-primary bg-size-200 bg-pos-0 text-white transition-all duration-500 hover:bg-pos-100;
+  }
+}
