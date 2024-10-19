@@ -382,7 +382,7 @@ export default function Home() {
       <Banner />
 
       <div className="container mx-auto">
-        <h2 className="mt-10 text-center font-bangers text-4xl">
+        <h2 className="mt-10 text-center font-bangers text-4xl lg:mt-14 lg:text-[45px]">
           Nosso Cardápio de Pizzas
         </h2>
 
