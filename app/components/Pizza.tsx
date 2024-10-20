@@ -6,10 +6,8 @@ import Modal from "react-modal";
 import PizzaDetails from "./PizzaDetails";
 import { PizzaProps } from "../types/pizza";
 
-// blind modal to body
 Modal.setAppElement("body");
 
-// modal styles
 const modalStyles = {
   overlay: {
     backgroundColor: "rgba(0,0,0,0.5)",
