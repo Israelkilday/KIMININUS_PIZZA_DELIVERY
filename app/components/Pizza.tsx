@@ -17,13 +17,12 @@ const modalStyles = {
 };
 
 const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
-  // modal state
   const [modal, setModal] = useState(false);
-  // open modal
+
   const openModal = () => {
     setModal(true);
   };
-  // closeModal
+
   const closeModal = () => {
     setModal(false);
   };
