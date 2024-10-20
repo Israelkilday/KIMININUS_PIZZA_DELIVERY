@@ -22,7 +22,7 @@ const About = () => {
         </h2>
 
         <div className="flex flex-col border-l-2 border-yellow-400 pl-4">
-          <p className="mb-4 font-medium text-white">
+          <p className="mb-4 font-medium text-white lg:text-lg">
             Desde 2023, a Kimininu&apos;s vem trazendo o melhor da pizza direto
             para a sua casa! Com um cardápio variado e ingredientes frescos,
             nosso objetivo é oferecer uma experiência única em cada mordida,
@@ -32,7 +32,7 @@ const About = () => {
           <div className="flex flex-col gap-4">
             <ul className="flex flex-col gap-y-4">
               <li>
-                <p className="flex items-center gap-2 font-medium text-white">
+                <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
                   <FaPizzaSlice className="bg-gradient size-10 text-yellow-400 sm:size-7 lg:size-6" />
                   Variedade: pizzas clássicas e especiais que agradam todos os
                   paladares.
@@ -40,14 +40,14 @@ const About = () => {
               </li>
 
               <li>
-                <p className="flex items-center gap-2 font-medium text-white">
+                <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
                   <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-7" />{" "}
                   Delivery rápido: entregamos na sua porta com rapidez e
                   cuidado.
                 </p>
               </li>
               <li>
-                <p className="flex items-center gap-2 font-medium text-white">
+                <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
                   <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:size-7" />{" "}
                   Qualidade artesanal: nossas pizzas são preparadas com
                   ingredientes frescos e selecionados.{" "}
@@ -55,7 +55,7 @@ const About = () => {
               </li>
             </ul>
 
-            <p className="mb-10 font-medium text-white md:mb-5 lg:mt-3">
+            <p className="mb-10 font-medium text-white md:mb-5 lg:mt-3 lg:text-lg">
               {" "}
               Venha experimentar o sabor de Kimininu&apos;s e faça seu pedido
               agora!

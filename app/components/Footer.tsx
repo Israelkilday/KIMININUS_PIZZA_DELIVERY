@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-primary bg-pattern px-2 py-10 lg:pt-14">
       <div className="container">
         <div className="flex flex-col justify-between gap-y-4 lg:flex-row">
-          <div className="mb-2 flex flex-col gap-y-4 lg:flex-row lg:gap-x-10">
+          <div className="mb-2 flex flex-col gap-y-4 lg:flex-row lg:gap-x-24">
             {/* logo */}
             <Link href="/" className="max-w-[160px] lg:max-w-max">
               <h2 className="text-left font-bangers text-5xl uppercase text-white">
