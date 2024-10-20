@@ -55,7 +55,7 @@ const About = () => {
               </li>
             </ul>
 
-            <p className="mb-10 font-medium text-white md:mb-5 lg:mt-3 lg:text-lg">
+            <p className="mb-10 font-medium text-white md:mb-5 lg:mb-16 lg:mt-3 lg:text-lg">
               {" "}
               Venha experimentar o sabor de Kimininu&apos;s e faça seu pedido
               agora!
