@@ -16,15 +16,12 @@ const modalStyles = {
 
 const CartBottom = () => {
   const { setIsOpen, cart, cartTotal } = useCartContext();
-  //   modal state
   const [modal, setModal] = useState(false);
 
-  //   open modal
   const openModal = () => {
     setModal(true);
   };
 
-  //   close modal
   const closeModal = () => {
     setModal(false);
   };
@@ -33,7 +30,6 @@ const CartBottom = () => {
     <>
       {cart.length >= 1 ? (
         <div className="mt-auto px-6 py-3 lg:py-6">
-          {/* total price */}
           <div className="mb-6 flex items-center justify-between font-robotoCondensed text-lg font-semibold">
             <div>Total</div>
             <div>${cartTotal.toFixed(2)}</div>
@@ -47,13 +43,13 @@ const CartBottom = () => {
               }}
               className="btn btn-lg gradient flex justify-center font-semibold"
             >
-              Checkout
+              Finalizar Compra
             </button>
           </div>
         </div>
       ) : (
         <div className="absolute top-0 -z-10 flex h-full w-full items-center justify-center">
-          <div>Your cart is empty</div>
+          <div>Seu carrinho está vazio</div>
         </div>
       )}
 

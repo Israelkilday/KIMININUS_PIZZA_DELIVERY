@@ -13,7 +13,6 @@ const CartMobileIcon = () => {
     >
       <BsHandbagFill className="text-4xl" />
 
-      {/* amount */}
       <span className="gradient absolute bottom-3 right-4 flex h-5 w-5 items-center justify-center rounded-full font-robotoCondensed text-[13px] text-white">
         {itemAmount}
       </span>

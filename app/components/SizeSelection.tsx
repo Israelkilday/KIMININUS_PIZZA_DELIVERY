@@ -10,7 +10,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
   return (
     <div className="mx-auto flex max-w-sm items-center justify-center lg:max-w-none lg:justify-start">
       {/* sizes */}
-      <div className="mb-10 flex items-baseline gap-x-12 font-medium">
+      <div className="font-Media mb-10 flex items-baseline gap-x-12">
         {/* smalll */}
         <label className="flex cursor-pointer flex-col items-center gap-x-2">
           <Image
@@ -18,13 +18,13 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             width={60}
             height={60}
             alt="pizza_iamge_label"
-            className={`${size === "small" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
+            className={`${size === "Pequena" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"
             name="size"
-            value="small"
-            checked={size === "small"}
+            value="Pequena"
+            checked={size === "Pequena"}
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />
@@ -38,33 +38,32 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
             width={70}
             height={70}
             alt="pizza_iamge_label"
-            className={`${size === "medium" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
+            className={`${size === "Media" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"
             name="size"
-            value="medium"
-            checked={size === "medium"}
+            value="Media"
+            checked={size === "Media"}
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />
           Media
         </label>
 
-        {/* large */}
         <label className="flex cursor-pointer flex-col items-center gap-x-2">
           <Image
             src={pizza.image}
             width={80}
             height={80}
             alt="pizza_iamge_label"
-            className={`${size === "large" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
+            className={`${size === "Grande" ? "rounded-full border-2 border-orange p-[2px]" : "border-transparent saturate-[.1] filter"} mb-1`}
           />
           <input
             type="radio"
             name="size"
-            value="large"
-            checked={size === "large"}
+            value="Grande"
+            checked={size === "Grande"}
             onChange={(e) => setSize(e.target.value)}
             className="mb-1 appearance-none"
           />

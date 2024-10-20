@@ -12,10 +12,8 @@ const CartDesktop = () => {
     <div
       className={`${isOpen ? "left-0" : "-left-full"} fixed bottom-0 top-0 hidden w-[500px] flex-col bg-white shadow-2xl transition-all duration-300 lg:flex`}
     >
-      {/* cart top  */}
       <CartTop />
 
-      {/*item list*/}
       <div
         className={`mr-4 mt-8 flex h-[65vh] flex-col gap-y-4 overflow-y-scroll px-10 py-2 scrollbar-thin ${cart.length >= 3 && "scrollbar-track-black/10 scrollbar-thumb-secondary"}`}
       >
@@ -24,7 +22,6 @@ const CartDesktop = () => {
         })}
       </div>
 
-      {/* cart bottom */}
       <CartBottom />
     </div>
   );

@@ -6,8 +6,7 @@ const CartTop = () => {
 
   return (
     <div className="flex h-20 w-full items-center justify-between border-b px-10">
-      {/* shoping bag text */}
-      <div className="font-semibold">Shoping Bag({itemAmount}) </div>
+      <div className="font-semibold">Sua sacola({itemAmount}) </div>
 
       {/* close icon */}
       <div onClick={() => setIsOpen(false)} className="group cursor-pointer">

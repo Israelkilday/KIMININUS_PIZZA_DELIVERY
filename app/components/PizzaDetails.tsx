@@ -10,7 +10,7 @@ import { useCartContext } from "../context/CartContext";
 
 const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
   // pizza size state
-  const [size, setSize] = useState("large");
+  const [size, setSize] = useState("Grande");
   // pizza crust state
   const [crust, setCrust] = useState("tradicional");
   // pizza topping state
@@ -24,11 +24,11 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
   // set the price basead on the pizza size
   useEffect(() => {
     const basePrice =
-      size === "small"
+      size === "Pequena"
         ? pizza.priceSm
-        : size === "medium"
+        : size === "Media"
           ? pizza.priceMd
-          : size === "large"
+          : size === "Grande"
             ? pizza.priceLg
             : 0;
 
@@ -43,7 +43,6 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
     additionalToppingPrice,
   ]);
 
-  //set additional topping price
   useEffect(() => {
     if (additionalTopping.length > 0) {
       const toppingPrice = additionalTopping.reduce((a, c) => {
@@ -58,9 +57,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
 
   return (
     <div className="flex h-full flex-col md:p-8 lg:flex-row lg:gap-x-8">
-      {/* top */}
       <div className="flex items-center justify-center lg:flex-1">
-        {/* pizza image */}
         <div className="mt-6 max-w-[300px] lg:mt-0 lg:max-w-none">
           <Image
             width={300}
@@ -82,13 +79,13 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
 
               {/* size & crust text */}
-              <div className="mb-6 text-lg font-medium">
+              <div className="font-Media mb-6 text-lg">
                 <span>
-                  {size === "small"
+                  {size === "Pequena"
                     ? "25 cm"
-                    : size === "medium"
+                    : size === "Media"
                       ? "30 cm"
-                      : size === "large"
+                      : size === "Grande"
                         ? "35 cm"
                         : null}
                 </span>

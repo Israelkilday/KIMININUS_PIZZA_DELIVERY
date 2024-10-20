@@ -2,7 +2,6 @@ import About from "../components/About";
 import Banner from "../components/Banner";
 import Pizza from "../components/Pizza";
 
-// pizza data
 const pizzas = [
   {
     id: 1,

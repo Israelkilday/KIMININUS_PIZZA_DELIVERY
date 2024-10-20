@@ -45,16 +45,11 @@ export interface CartContextType {
 export const CartContext = createContext<CartContextType | null>(null);
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
-  // cart open state
   const [isOpen, setIsOpen] = useState(false);
-  // cart state
   const [cart, setCart] = useState<CartItemProps[]>([]);
-  // cart total state
   const [cartTotal, setCartTotal] = useState(0);
-  // item amount state
   const [itemAmount, setItemAmount] = useState(0);
 
-  // update item amount
   useEffect(() => {
     const amount = cart.reduce((a, c) => {
       return a + c.amount;
@@ -62,7 +57,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     setItemAmount(amount);
   }, [cart]);
 
-  // update cart total price
   useEffect(() => {
     const price = cart.reduce((a, c) => {
       return a + Number(c.price) * c.amount;
@@ -70,7 +64,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     setCartTotal(price);
   }, [cart]);
 
-  // add to cart
   const addToCart: AddToCartFunction = (
     id,
     image,
@@ -80,7 +73,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     size,
     crust,
   ) => {
-    // sort additionalTopping array by name
     additionalTopping.sort((a, b) => a.name.localeCompare(b.name));
 
     const newItem = {
@@ -104,7 +96,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         item.id === id &&
         item.price === price &&
         item.size === size &&
-        // check if additionalTopping array is equal
         JSON.stringify(item.additionalTopping.sort()) ===
           JSON.stringify(additionalTopping.sort()) &&
         item.crust === crust,
@@ -118,11 +109,9 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       setCart(newCart);
     }
 
-    // open the cart everytime you add a product
     setIsOpen(true);
   };
 
-  // remove item
   const removeItem: ModifyCartItemFunction = (id, price, crust) => {
     const itemIndex = cart.findIndex(
       (item) => item.id === id && item.price === price && item.crust === crust,
@@ -148,7 +137,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  // derease amount
   const decreaseAmount: ModifyCartItemFunction = (id, price) => {
     const itemIndex = cart.findIndex(
       (item) => item.id === id && item.price === price,
