@@ -42,7 +42,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
       {successMsg ? (
         <div className="flex h-[100vh] flex-col items-center justify-center px-6 lg:h-[500px]">
           <h2 className="text-center text-2xl font-semibold">
-            Thank you! The order has been palced
+            Obrigado! Pedido realizado com sucesso.
           </h2>
 
           <Image
@@ -53,103 +53,64 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
           />
 
           <div>
-            This window will close in <span>{count}</span> {""} seconds
+            Esta janela será fechada em <span>{count}</span> {""} segundos
           </div>
         </div>
       ) : (
         <div className="h-full lg:gap-x-8 lg:px-12 lg:py-8">
-          {/* title */}
-          <h2 className="mb-2 pt-6 text-center text-[20px] font-extrabold uppercase lg:mb-6 lg:pt-0 lg:text-left">
+          <h2 className="mb-2 pt-6 text-center text-[20px] font-extrabold uppercase lg:mb-4 lg:pt-0 lg:text-left">
             Dados da Entrega
           </h2>
 
           <div className="flex h-[86vh] flex-col lg:h-[47.5vh] lg:flex-row lg:gap-x-4">
-            {/* box 1 */}
             <div className="h-full flex-1 overflow-y-auto px-8 py-4 lg:overflow-visible lg:px-0 lg:py-0">
-              {/* input wrapper */}
               <div className="flex h-full flex-col gap-4">
-                {/* first name & last name */}
                 <div className="flex flex-col justify-between gap-4 lg:flex-row lg:gap-0 lg:gap-x-4">
                   <input
                     type="text"
-                    placeholder="First Name"
-                    className="input w-full"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
+                    placeholder="Nome"
                     className="input w-full"
                   />
                 </div>
 
-                {/* phone & email */}
+                <div className="flex flex-col justify-between gap-4 lg:gap-x-4">
+                  <input
+                    type="text"
+                    placeholder="Telefone"
+                    className="input w-full"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Forma de Pagamento"
+                    className="input w-full"
+                  />
+                </div>
+
                 <div className="flex flex-col justify-between gap-4 lg:flex-row lg:gap-0 lg:gap-x-4">
                   <input
                     type="text"
-                    placeholder="Phone"
-                    className="input w-full"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Email Address"
+                    placeholder="Endereço"
                     className="input w-full"
                   />
                 </div>
 
-                {/* street & street no */}
-                <div className="flex flex-col justify-between gap-4 lg:flex-row lg:gap-0 lg:gap-x-4">
-                  <input
-                    type="text"
-                    placeholder="Street Name"
-                    className="input w-full"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Steet No."
-                    className="input w-full"
-                  />
-                </div>
-
-                {/* block floor & apartament */}
-                <div className="flex justify-between gap-x-4">
-                  <input
-                    type="text"
-                    placeholder="Block"
-                    className="input w-full"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Floor"
-                    className="input w-full"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Apt No"
-                    className="input w-full"
-                  />
-                </div>
-
-                {/* textarea */}
                 <div className="h-full flex-1">
                   <textarea
-                    placeholder="Mentions (optional)"
+                    placeholder="Informações adicionais (opicional)"
                     className="textarea h-full w-full"
                   ></textarea>
                 </div>
               </div>
             </div>
 
-            {/* box 2 */}
             <div className="flex h-full flex-1 flex-col justify-between px-8 pt-3 lg:max-w-[40%] lg:p-0">
               <div className="mb-4 flex h-full flex-col rounded-lg border p-4">
-                <h3 className="mb-4 border-b pb-4 text-base font-extrabold uppercase">
-                  Your order
+                <h3 className="mb-4 border-b pb-4 text-base font-extrabold uppercase md:text-center">
+                  Seu Pedido
                 </h3>
 
-                {/* items */}
-                <div className="flex h-[240px] flex-col gap-y-4 overflow-hidden overflow-y-scroll py-2 font-semibold scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-50">
+                <div className="flex h-[150px] flex-col gap-y-4 overflow-hidden overflow-y-scroll py-2 font-semibold scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-50 md:h-[100px] md:px-6 lg:h-[240px]">
                   {cart.map((pizza, index) => {
                     return (
                       <div
@@ -168,12 +129,11 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
                 </div>
               </div>
 
-              {/* place order btn */}
               <button
                 onClick={() => setSuccesMsg(true)}
                 className="btn btn-lg gradient w-full"
               >
-                Place order
+                Fazer pedido
               </button>
             </div>
           </div>
