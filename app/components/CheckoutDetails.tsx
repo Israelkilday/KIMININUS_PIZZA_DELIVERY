@@ -13,7 +13,6 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
   const [successMsg, setSuccesMsg] = useState(false);
   const [count, setCount] = useState(5);
 
-  // conter
   useEffect(() => {
     if (successMsg) {
       const timer = setTimeout(() => {
@@ -22,7 +21,6 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
         }
       }, 1000);
 
-      //   clear time
       return () => clearTimeout(timer);
     }
   }, [count, successMsg]);
@@ -31,13 +29,10 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
     if (successMsg) {
       const timer = setTimeout(() => {
         setSuccesMsg(false);
-        // clean cart
         setCart([]);
-        // close modal
         setModal(false);
       }, 5000);
 
-      // clear time
       return () => clearTimeout(timer);
     }
   }, [successMsg, setCart, setModal]);
@@ -64,8 +59,8 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
       ) : (
         <div className="h-full lg:gap-x-8 lg:px-12 lg:py-8">
           {/* title */}
-          <h2 className="mb-6 pt-6 text-center text-[20px] font-extrabold uppercase lg:pt-0 lg:text-left">
-            Shiping & Checkout
+          <h2 className="mb-2 pt-6 text-center text-[20px] font-extrabold uppercase lg:mb-6 lg:pt-0 lg:text-left">
+            Dados da Entrega
           </h2>
 
           <div className="flex h-[86vh] flex-col lg:h-[47.5vh] lg:flex-row lg:gap-x-4">

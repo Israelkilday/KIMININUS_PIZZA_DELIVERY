@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { Topping } from "../types/pizza";
 import Image from "next/image";
@@ -9,19 +8,13 @@ import Toppings from "./Toppings";
 import { useCartContext } from "../context/CartContext";
 
 const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
-  // pizza size state
   const [size, setSize] = useState("Grande");
-  // pizza crust state
   const [crust, setCrust] = useState("tradicional");
-  // pizza topping state
   const [additionalTopping, setAdditionalTopping] = useState<Topping[]>([]);
-  // pizza topping price
   const [additionalToppingPrice, setAdditionalToppingPrice] = useState(0);
-  // price state
   const [price, setPrice] = useState(0);
   const { addToCart } = useCartContext();
 
-  // set the price basead on the pizza size
   useEffect(() => {
     const basePrice =
       size === "Pequena"
@@ -70,15 +63,12 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
         </div>
       </div>
 
-      {/* details */}
       <div className="flex flex-1 flex-col">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200 lg:h-[50vh]">
-            {/*name */}
             <div className="font-semibold">
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
 
-              {/* size & crust text */}
               <div className="font-Media mb-6 text-lg">
                 <span>
                   {size === "Pequena"
