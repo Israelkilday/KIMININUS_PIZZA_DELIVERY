@@ -12,9 +12,43 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
   const [successMsg, setSuccesMsg] = useState(false);
   const [count, setCount] = useState(5);
+  const [formValid, setFormValid] = useState(false); // Novo estado para a validação do formulário
+  const [formData, setFormData] = useState({
+    nome: "",
+    telefone: "",
+    formaPagamento: "",
+    endereco: "",
+    informacoesAdicionais: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Função para verificar se todos os campos obrigatórios estão preenchidos
+  const validateForm = () => {
+    if (
+      !formData.nome ||
+      !formData.telefone ||
+      !formData.formaPagamento ||
+      !formData.endereco
+    ) {
+      alert(
+        "Por favor, preencha todos os campos obrigatórios antes de finalizar o pedido.",
+      );
+      return false;
+    }
+    return true;
+  };
 
   useEffect(() => {
-    if (successMsg) {
+    // Executa apenas se o formulário for validado
+    if (successMsg && formValid) {
       const timer = setTimeout(() => {
         if (count > 1) {
           setCount(count - 1);
@@ -23,19 +57,62 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
       return () => clearTimeout(timer);
     }
-  }, [count, successMsg]);
+  }, [count, successMsg, formValid]);
 
   useEffect(() => {
-    if (successMsg) {
+    // Função para enviar mensagem para o WhatsApp
+    const sendToWhatsApp = () => {
+      // Se todos os campos estiverem preenchidos, envia o pedido
+      const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaPagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
+        .map(
+          (pizza) =>
+            `${pizza.name} - x${pizza.amount} - Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
+        )
+        .join("\n")}`;
+
+      const phoneNumber = "5585989295516"; // Substitua pelo número de telefone de destino
+      const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+      window.open(url, "_blank");
+
+      // Limpa o carrinho e fecha o modal somente se o pedido for enviado
+      setCart([]); // Limpa o carrinho
+      setModal(false); // Fecha o modal
+    };
+
+    // Se a mensagem de sucesso for acionada e a contagem for 1, envia a mensagem
+    if (successMsg && count === 1) {
+      sendToWhatsApp();
+
       const timer = setTimeout(() => {
         setSuccesMsg(false);
-        setCart([]);
-        setModal(false);
-      }, 5000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
-  }, [successMsg, setCart, setModal]);
+  }, [
+    successMsg,
+    count,
+    setCart,
+    setModal,
+    cart,
+    formData.endereco,
+    formData.formaPagamento,
+    formData.informacoesAdicionais,
+    formData.nome,
+    formData.telefone,
+  ]);
+
+  // Função de envio do pedido, acionada ao clicar no botão
+  const handlePlaceOrder = () => {
+    const isValid = validateForm(); // Valida o formulário
+    if (isValid) {
+      setFormValid(true); // Define que o formulário é válido
+      setSuccesMsg(true); // Exibe a mensagem de sucesso
+    } else {
+      setFormValid(false); // Caso contrário, não exibe a mensagem
+    }
+  };
 
   return (
     <div>
@@ -53,7 +130,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
           />
 
           <div>
-            Esta janela será fechada em <span>{count}</span> {""} segundos
+            Esta janela será fechada em <span>{count}</span> segundos
           </div>
         </div>
       ) : (
@@ -68,6 +145,9 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
                 <div className="flex flex-col justify-between gap-4 lg:flex-row lg:gap-0 lg:gap-x-4">
                   <input
                     type="text"
+                    name="nome"
+                    value={formData.nome}
+                    onChange={handleInputChange}
                     placeholder="Nome"
                     className="input w-full"
                   />
@@ -76,12 +156,18 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
                 <div className="flex flex-col justify-between gap-4 lg:gap-x-4">
                   <input
                     type="text"
+                    name="telefone"
+                    value={formData.telefone}
+                    onChange={handleInputChange}
                     placeholder="Telefone"
                     className="input w-full"
                   />
 
                   <input
                     type="text"
+                    name="formaPagamento"
+                    value={formData.formaPagamento}
+                    onChange={handleInputChange}
                     placeholder="Forma de Pagamento"
                     className="input w-full"
                   />
@@ -90,6 +176,9 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
                 <div className="flex flex-col justify-between gap-4 lg:flex-row lg:gap-0 lg:gap-x-4">
                   <input
                     type="text"
+                    name="endereco"
+                    value={formData.endereco}
+                    onChange={handleInputChange}
                     placeholder="Endereço"
                     className="input w-full"
                   />
@@ -97,7 +186,10 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
                 <div className="h-full flex-1">
                   <textarea
-                    placeholder="Informações adicionais (opicional)"
+                    name="informacoesAdicionais"
+                    value={formData.informacoesAdicionais}
+                    onChange={handleInputChange}
+                    placeholder="Informações adicionais (opcional)"
                     className="textarea h-full w-full"
                   ></textarea>
                 </div>
@@ -130,10 +222,10 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
               </div>
 
               <button
-                onClick={() => setSuccesMsg(true)}
+                onClick={handlePlaceOrder} // Chama a função de validação e exibe o modal de sucesso
                 className="btn btn-lg gradient w-full"
               >
-                Fazer pedido
+                Fazer Pedido
               </button>
             </div>
           </div>
