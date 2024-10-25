@@ -12,7 +12,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
   const [successMsg, setSuccesMsg] = useState(false);
   const [count, setCount] = useState(5);
-  const [formValid, setFormValid] = useState(false); // Novo estado para a validação do formulário
+  const [formValid, setFormValid] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
@@ -30,7 +30,6 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
     });
   };
 
-  // Função para verificar se todos os campos obrigatórios estão preenchidos
   const validateForm = () => {
     if (
       !formData.nome ||
@@ -47,7 +46,6 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
   };
 
   useEffect(() => {
-    // Executa apenas se o formulário for validado
     if (successMsg && formValid) {
       const timer = setTimeout(() => {
         if (count > 1) {
@@ -60,13 +58,11 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
   }, [count, successMsg, formValid]);
 
   useEffect(() => {
-    // Função para enviar mensagem para o WhatsApp
     const sendToWhatsApp = () => {
-      // Se todos os campos estiverem preenchidos, envia o pedido
       const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaPagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
         .map(
           (pizza) =>
-            `${pizza.name} - x${pizza.amount} - Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
+            `${pizza.name} - Quantidade:${pizza.amount} - Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
         )
         .join("\n")}`;
 
@@ -75,12 +71,10 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
       window.open(url, "_blank");
 
-      // Limpa o carrinho e fecha o modal somente se o pedido for enviado
-      setCart([]); // Limpa o carrinho
-      setModal(false); // Fecha o modal
+      setCart([]);
+      setModal(false);
     };
 
-    // Se a mensagem de sucesso for acionada e a contagem for 1, envia a mensagem
     if (successMsg && count === 1) {
       sendToWhatsApp();
 
@@ -103,14 +97,13 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
     formData.telefone,
   ]);
 
-  // Função de envio do pedido, acionada ao clicar no botão
   const handlePlaceOrder = () => {
-    const isValid = validateForm(); // Valida o formulário
+    const isValid = validateForm();
     if (isValid) {
-      setFormValid(true); // Define que o formulário é válido
-      setSuccesMsg(true); // Exibe a mensagem de sucesso
+      setFormValid(true);
+      setSuccesMsg(true);
     } else {
-      setFormValid(false); // Caso contrário, não exibe a mensagem
+      setFormValid(false);
     }
   };
 
@@ -222,7 +215,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
               </div>
 
               <button
-                onClick={handlePlaceOrder} // Chama a função de validação e exibe o modal de sucesso
+                onClick={handlePlaceOrder}
                 className="btn btn-lg gradient w-full"
               >
                 Fazer Pedido
