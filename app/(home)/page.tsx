@@ -381,12 +381,12 @@ export default function Home() {
       <Banner />
 
       <div className="container mx-auto">
-        <h2 className="mt-10 text-center font-bangers text-4xl lg:mt-14 lg:text-[45px]">
+        <h2 className="mt-10 text-center font-bangers text-4xl lg:mt-16 lg:text-[45px]">
           Nosso Cardápio de Pizzas
         </h2>
 
         {/* pizza grid */}
-        <div className="grid gap-[15px] py-12 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xl:gap-[30px]">
+        <div className="mb-6 grid gap-[15px] pt-12 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xl:gap-[30px]">
           {pizzas.map((pizza) => {
             return <Pizza key={pizza.id} pizza={pizza} />;
           })}
