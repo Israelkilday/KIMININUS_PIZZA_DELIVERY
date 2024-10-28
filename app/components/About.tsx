@@ -53,8 +53,8 @@ const About = () => {
                   </p>
                 </li>
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white lg:size-6 lg:pb-1">
-                    <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:text-lg" />{" "}
+                  <p className="flex items-center gap-2 font-medium text-white lg:size-6 lg:pb-1 lg:text-lg">
+                    <FaCheck className="size-12 text-yellow-400 sm:size-8" />{" "}
                     Qualidade artesanal: nossas pizzas são preparadas com
                     ingredientes frescos e selecionados.{" "}
                   </p>
