@@ -11,7 +11,7 @@ const About = () => {
         Sobre Nós
       </h2>
 
-      <section className="relative h-screen w-full pt-4 lg:container md:pt-12 lg:mb-24 lg:mt-4 lg:h-[450px] lg:pt-0">
+      <section className="relative h-screen w-full pt-4 lg:container md:pt-12 lg:mb-24 lg:mt-4 lg:h-[500px] lg:w-4/5 lg:pt-0">
         <Image
           alt="Agende nos melhores com FSW Barber"
           src="/banner-about.jpg"
@@ -21,7 +21,7 @@ const About = () => {
           className="object-cover brightness-50 lg:rounded-xl"
         />
 
-        <div className="absolute flex flex-col px-6 py-5 md:w-3/4 md:py-0 lg:w-2/3 lg:px-10 lg:py-12">
+        <div className="lg:py-12p absolute flex flex-col px-6 py-10 md:w-3/4 md:py-0 lg:w-2/3 lg:px-10">
           <h2 className="mb-4 pt-5 text-center font-bangers text-4xl text-white md:mb-5 md:pt-0 md:text-left lg:mb-6 lg:hidden lg:pt-1 lg:text-[45px]">
             {" "}
             Sobre Nós
@@ -55,14 +55,14 @@ const About = () => {
 
                 <li>
                   <p className="flex items-center gap-2 font-medium text-white lg:pb-1 lg:text-lg">
-                    <FaCheck className="size-11 text-yellow-400 sm:size-8 lg:size-6" />{" "}
+                    <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:size-7" />{" "}
                     Qualidade artesanal: nossas pizzas são preparadas com
                     ingredientes frescos e selecionados.
                   </p>
                 </li>
               </ul>
 
-              <p className="mb-10 font-medium text-white md:mb-5 lg:mb-12 lg:text-lg">
+              <p className="mb-16 font-medium text-white md:mb-5 lg:mb-12 lg:text-lg">
                 {" "}
                 Venha experimentar o sabor de Kimininu&apos;s e faça seu pedido
                 agora!
