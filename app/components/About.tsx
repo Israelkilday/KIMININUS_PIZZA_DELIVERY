@@ -47,7 +47,7 @@ const About = () => {
 
                 <li>
                   <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
-                    <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-7" />{" "}
+                    <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-8" />{" "}
                     Delivery rápido: entregamos na sua porta com rapidez e
                     cuidado.
                   </p>
