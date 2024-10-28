@@ -62,7 +62,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
       const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaPagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
         .map(
           (pizza) =>
-            `${pizza.name} - Quantidade: ${pizza.amount} - Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
+            `${pizza.name} - Quantidade:{" "} ${pizza.amount} - Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
         )
         .join("\n")}`;
 
