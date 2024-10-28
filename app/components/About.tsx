@@ -11,7 +11,7 @@ const About = () => {
         Sobre Nós
       </h2>
 
-      <section className="relative h-screen w-full pt-4 lg:container md:pt-12 lg:mb-24 lg:mt-4 lg:h-[500px] lg:w-4/5 lg:pt-0">
+      <section className="relative h-screen w-full pt-4 lg:container md:pt-12 lg:mb-24 lg:mt-4 lg:h-[500px] lg:pt-0">
         <Image
           alt="Agende nos melhores com FSW Barber"
           src="/banner-about.jpg"
