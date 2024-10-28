@@ -21,7 +21,7 @@ const About = () => {
           className="object-cover brightness-50 lg:rounded-xl"
         />
 
-        <div className="lg:py-12p absolute flex flex-col px-6 py-10 md:w-3/4 md:py-0 lg:w-2/3 lg:px-10">
+        <div className="absolute flex flex-col px-6 py-10 md:w-3/4 md:py-0 lg:w-2/3 lg:px-10 lg:py-16">
           <h2 className="mb-4 pt-5 text-center font-bangers text-4xl text-white md:mb-5 md:pt-0 md:text-left lg:mb-6 lg:hidden lg:pt-1 lg:text-[45px]">
             {" "}
             Sobre Nós
