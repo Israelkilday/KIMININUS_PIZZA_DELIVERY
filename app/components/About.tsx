@@ -38,23 +38,23 @@ const About = () => {
             <div className="flex flex-col gap-4">
               <ul className="flex flex-col gap-y-4">
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white">
-                    <FaPizzaSlice className="bg-gradient size-10 text-yellow-400 sm:size-7 lg:size-6 lg:text-lg" />
+                  <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
+                    <FaPizzaSlice className="bg-gradient size-10 text-yellow-400 sm:size-7 lg:size-6" />
                     Variedade: pizzas clássicas e especiais que agradam todos os
                     paladares.
                   </p>
                 </li>
 
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white">
-                    <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-7 lg:text-lg" />{" "}
+                  <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
+                    <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-7" />{" "}
                     Delivery rápido: entregamos na sua porta com rapidez e
                     cuidado.
                   </p>
                 </li>
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white lg:pb-1">
-                    <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:size-6 lg:text-lg" />{" "}
+                  <p className="flex items-center gap-2 font-medium text-white lg:size-6 lg:pb-1">
+                    <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:text-lg" />{" "}
                     Qualidade artesanal: nossas pizzas são preparadas com
                     ingredientes frescos e selecionados.{" "}
                   </p>
