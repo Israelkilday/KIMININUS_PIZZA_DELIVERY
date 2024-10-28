@@ -385,8 +385,7 @@ export default function Home() {
           Nosso Cardápio de Pizzas
         </h2>
 
-        {/* pizza grid */}
-        <div className="mb-6 grid gap-[15px] pt-12 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xl:gap-[30px]">
+        <div className="mb-4 grid gap-[15px] pt-12 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xl:gap-[30px]">
           {pizzas.map((pizza) => {
             return <Pizza key={pizza.id} pizza={pizza} />;
           })}
