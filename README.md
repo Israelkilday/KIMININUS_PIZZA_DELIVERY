@@ -1,9 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👨‍💻 KIMININU'S PIZZARIA
 
-## Getting Started
+<a name="readme-top"></a>
 
-First, run the development server:
+<div align="center"><br>
 
+**_[KIMININU'S PIZZARIA]()_**.
+
+ </div>
+
+## ⚙️ Pré-requisitos
+
+- **_Node.js_** 
+- **_Vite_** 
+- **_Git_** 
+- **_npm_** (v6.0.0 ou superior) 
+
+## Features
+
+> **summary -** O resumo dos recursos está listado abaixo..
+
+- 
+- 
+- 
+- 
+- 
+## 🛠️ Principais Tecnologias
+
+- **_[Typescript](https://www.typescriptlang.org/)_**
+- **_[Next.JS](https://nextjs.org/)_**
+- **_[React.js](https://pt-br.legacy.reactjs.org/)_**
+- **_[React-Modal](https://www.npmjs.com/package/react-modal)_**
+- **_[Git](https://www.git-scm.com/)_**
+
+## 💻 Como Rodar o Projeto
+
+1.  Clone o repositório: `git clone `
+2.  Instale as dependências: `npm install`
+3.  Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
 # or
@@ -12,25 +45,25 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+```  
+5.  Abra o navegador e acesse `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Estrutura de Diretórios
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/app`: Código-fonte da aplicação.
+- `/public`: Arquivos públicos.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🔗 Link do Projeto
 
-## Learn More
+## 🧠 Autor
 
-To learn more about Next.js, take a look at the following resources:
+israel.kilday@yahoo.com.br
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/israel-kilday-machado-de-souza-801482230) <a href="mailto:israelkilday27@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+</a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Obrigado por visitar meu projeto! 👋
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+  
