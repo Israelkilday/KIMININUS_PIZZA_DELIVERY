@@ -42,9 +42,6 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "KIMININU'S PIZZARIA",
   description: "O melhor da pizza sem sair de casa.",
-  icons: {
-    icon: "public/favicon.ico",
-  },
 };
 
 export default function RootLayout({
