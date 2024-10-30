@@ -55,9 +55,6 @@ export default function RootLayout({
   return (
     <CartProvider>
       <html lang="en">
-        <head>
-          <link rel="icon" href="/favicon.ico" sizes="any" />
-        </head>
         <body
           className={`${inter.className} ${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} ${orbitron.variable} font-quicksand`}
         >
