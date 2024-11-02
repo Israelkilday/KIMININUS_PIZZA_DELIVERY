@@ -4,7 +4,7 @@
 
 <div align="center"><br>
 
-**_[KIMININU'S PIZZARIA](https://kimininus-pizza-delivery.vercel.app/)_** Bem-vindo ao repositório da Kiminiu's Pizzaria, um projeto de delivery de pizzas desenvolvido como freelancer, com foco em facilitar os pedidos de pizza na comunidade.
+**_[KIMININU'S PIZZARIA](https://kimininus-pizza-delivery-git-main-isarel-kildays-projects.vercel.app/)_** Bem-vindo ao repositório da Kiminiu's Pizzaria, um projeto de delivery de pizzas desenvolvido como freelancer, com foco em facilitar os pedidos de pizza na comunidade.
 Este sistema permite que os usuários acessem o cardápio, personalizem seus pedidos e enviem as informações diretamente para o WhatsApp do restaurante para finalização do pedido..
 
  </div>
@@ -101,7 +101,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://kimininus-pizza-delivery.vercel.app/
+https://kimininus-pizza-delivery-git-main-isarel-kildays-projects.vercel.app/
 
 ## 🧠 Autor
 
