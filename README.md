@@ -18,7 +18,7 @@ Este sistema permite que os usuários acessem o cardápio, personalizem seus ped
 
 ## 🎬 Vídeo do projeto
 
-https://github.com/user-attachments/assets/4878b55e-cab9-44d9-a65a-632af1eb057a
+https://github.com/user-attachments/assets/b453c233-7598-4499-ba7c-da4235c8c780
 
 ## Features
 
