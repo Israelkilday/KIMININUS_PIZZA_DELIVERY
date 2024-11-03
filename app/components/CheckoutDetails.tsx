@@ -16,7 +16,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
-    formaPagamento: "",
+    formaDePagamento: "",
     endereco: "",
     informacoesAdicionais: "",
   });
@@ -30,19 +30,21 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
     });
   };
 
-  const validateForm = () => {
-    if (
-      !formData.nome ||
-      !formData.telefone ||
-      !formData.formaPagamento ||
-      !formData.endereco
-    ) {
+  const isFormDataValid = () => {
+    const { nome, telefone, formaDePagamento, endereco } = formData;
+    return nome && telefone && formaDePagamento && endereco;
+  };
+
+  const handlePlaceOrder = () => {
+    if (isFormDataValid()) {
+      setFormValid(true);
+      setSuccesMsg(true);
+    } else {
       alert(
         "Por favor, preencha todos os campos obrigatórios antes de finalizar o pedido.",
       );
-      return false;
+      setFormValid(false);
     }
-    return true;
   };
 
   useEffect(() => {
@@ -59,7 +61,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
   useEffect(() => {
     const sendToWhatsApp = () => {
-      const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaPagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
+      const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaDePagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
         .map(
           (pizza) =>
             `Quantidade: ${pizza.amount} - ${pizza.name} -  Total: ${(pizza.price * pizza.amount).toFixed(2)}`,
@@ -91,21 +93,11 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
     setModal,
     cart,
     formData.endereco,
-    formData.formaPagamento,
+    formData.formaDePagamento,
     formData.informacoesAdicionais,
     formData.nome,
     formData.telefone,
   ]);
-
-  const handlePlaceOrder = () => {
-    const isValid = validateForm();
-    if (isValid) {
-      setFormValid(true);
-      setSuccesMsg(true);
-    } else {
-      setFormValid(false);
-    }
-  };
 
   return (
     <div>
@@ -158,8 +150,8 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
 
                   <input
                     type="text"
-                    name="formaPagamento"
-                    value={formData.formaPagamento}
+                    name="formaDePagamento"
+                    value={formData.formaDePagamento}
                     onChange={handleInputChange}
                     placeholder="Forma de Pagamento"
                     className="input w-full"
