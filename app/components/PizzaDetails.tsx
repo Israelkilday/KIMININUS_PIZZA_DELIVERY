@@ -84,18 +84,14 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
               </div>
             </div>
 
-            {/* size selection */}
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
 
-            {/* crust sizesection */}
             <CrustSelection crust={crust} setCrust={setCrust} />
 
-            {/* toppings */}
             <div className="mb-4 text-xl font-semibold">
               Escolher acompanhamento:
             </div>
 
-            {/* topping list */}
             <div className="flex flex-1 flex-wrap justify-center gap-2 py-1 lg:justify-start">
               {pizza.toppings?.map((topping, index) => {
                 return (
@@ -111,7 +107,6 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
           </div>
         </div>
 
-        {/* add to cart btn */}
         <div className="flex h-full items-center px-2 lg:items-end">
           <button
             onClick={() => {

@@ -4,10 +4,8 @@ import Modal from "react-modal";
 import { IoCloseOutline } from "react-icons/io5";
 import CheckoutDetails from "./CheckoutDetails";
 
-// blind modal to body
 Modal.setAppElement("body");
 
-// modal styles
 const modalStyles = {
   overlay: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -35,7 +33,6 @@ const CartBottom = () => {
             <div>${cartTotal.toFixed(2)}</div>
           </div>
 
-          {/* btn */}
           <div className="flex flex-col gap-y-3">
             <button
               onClick={() => {
@@ -53,7 +50,6 @@ const CartBottom = () => {
         </div>
       )}
 
-      {/* checkout Modal */}
       {modal && (
         <Modal
           isOpen={modal}
@@ -62,7 +58,6 @@ const CartBottom = () => {
           contentLabel="Checkout Modal"
           className="h-full w-full bg-white outline-none lg:fixed lg:left-[50%] lg:top-[50%] lg:max-h-[500px] lg:max-w-[800px] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:rounded-[30px]"
         >
-          {/* close modal icon */}
           <div
             onClick={closeModal}
             className="absolute right-2 top-2 z-30 cursor-pointer duration-200 hover:scale-125"

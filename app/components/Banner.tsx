@@ -16,7 +16,6 @@ const Banner = () => {
           globalFactorY={0.3}
           className="flex w-full flex-col items-center justify-between lg:h-[670px] lg:flex-row"
         >
-          {/* text */}
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
             <div className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
               <div className="flex-1">
@@ -28,9 +27,7 @@ const Banner = () => {
             </div>
           </MouseParallaxChild>
 
-          {/* images */}
           <MouseParallaxChild factorX={0.2} factorY={0.3} className="relative">
-            {/*pizza image */}
             <div className="flex flex-1 flex-col items-center px-6 text-center lg:flex-row lg:text-left">
               <div className="flex max-w-sm flex-1 animate-rotation justify-end lg:max-w-max">
                 <Image
@@ -43,7 +40,6 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* chilli img 1 */}
             <MouseParallaxChild
               factorX={0.2}
               factorY={0.3}
@@ -58,7 +54,6 @@ const Banner = () => {
               />
             </MouseParallaxChild>
 
-            {/* chilli img 2 */}
             <MouseParallaxChild
               factorX={0.4}
               factorY={0.4}
@@ -73,7 +68,6 @@ const Banner = () => {
               />
             </MouseParallaxChild>
 
-            {/* garlic img 1 */}
             <MouseParallaxChild
               factorX={0.5}
               factorY={0.5}
@@ -88,7 +82,6 @@ const Banner = () => {
               />
             </MouseParallaxChild>
 
-            {/* garlic img 2 */}
             <MouseParallaxChild
               factorX={0.3}
               factorY={0.6}
@@ -103,7 +96,6 @@ const Banner = () => {
               />
             </MouseParallaxChild>
 
-            {/* garlic img 3 */}
             <MouseParallaxChild
               factorX={0.4}
               factorY={1}
@@ -118,7 +110,6 @@ const Banner = () => {
               />
             </MouseParallaxChild>
 
-            {/* leaves */}
             <MouseParallaxChild
               factorX={0.2}
               factorY={0.2}

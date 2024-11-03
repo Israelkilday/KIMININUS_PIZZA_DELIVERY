@@ -124,7 +124,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  // increase amount
   const increaseAmount: ModifyCartItemFunction = (id, price) => {
     const itemIndex = cart.findIndex(
       (item) => item.id === id && item.price === price,

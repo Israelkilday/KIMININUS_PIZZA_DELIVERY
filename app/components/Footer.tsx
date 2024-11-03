@@ -7,7 +7,6 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col justify-between gap-y-4 lg:flex-row">
           <div className="flex flex-col gap-y-4 lg:flex-row lg:gap-x-32">
-            {/* logo */}
             <Link href="/" className="max-w-[160px] lg:max-w-max">
               <h2 className="text-left font-bangers text-5xl uppercase text-white">
                 kimi<span className="text-yellow-300">ninu&apos;s</span>
@@ -81,7 +80,6 @@ const Footer = () => {
           </section>
         </div>
 
-        {/* copyright */}
         <div className="mt-4 border-t pt-4 text-left font-medium text-white lg:pt-6 lg:text-center">
           <a
             href="https://portfolioikdev-zeta-nine.vercel.app/"

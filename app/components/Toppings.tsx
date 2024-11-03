@@ -8,23 +8,17 @@ const Toppings: React.FC<ToppingProps> = ({
   additionalTopping,
   setAdditionalTopping,
 }) => {
-  // checkbox state
   const [isChecked, setIsChecked] = useState(false);
 
-  // handle check
   const handleCheckBox = () => {
     setIsChecked(!isChecked);
   };
 
-  // handle topping
   const handleTopping = useCallback(() => {
-    //  use set ensure unique values
-
     if (isChecked) {
       const newToppings = new Set([...additionalTopping, { ...topping }]);
       setAdditionalTopping(Array.from(newToppings));
     } else {
-      // remove the topping with the matching name
       const newToppings = additionalTopping.filter((toppingObj) => {
         return toppingObj.name !== topping.name;
       });
@@ -50,12 +44,10 @@ const Toppings: React.FC<ToppingProps> = ({
         className="mb-2"
       />
 
-      {/* topping name */}
       <div className="text-center text-sm font-medium capitalize">
         {topping.name}
       </div>
 
-      {/* checkbox */}
       <input
         type="checkbox"
         checked={isChecked}
@@ -63,7 +55,6 @@ const Toppings: React.FC<ToppingProps> = ({
         className="absolute h-full w-full cursor-pointer opacity-0"
       />
 
-      {/* checkmark icon */}
       <div
         className={`${isChecked ? "opacity-100" : "opacity-0"} absolute right-1 top-1`}
       >

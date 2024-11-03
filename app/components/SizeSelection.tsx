@@ -9,9 +9,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
 }) => {
   return (
     <div className="mx-auto flex max-w-sm items-center justify-center lg:max-w-none lg:justify-start">
-      {/* sizes */}
       <div className="font-Media mb-10 flex items-baseline gap-x-12">
-        {/* smalll */}
         <label className="flex cursor-pointer flex-col items-center gap-x-2">
           <Image
             src={pizza.image}
@@ -31,7 +29,6 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
           Pequena
         </label>
 
-        {/* mediun */}
         <label className="flex cursor-pointer flex-col items-center gap-x-2">
           <Image
             src={pizza.image}

@@ -3,7 +3,6 @@ import { CrustSelectionProps } from "../types/CrustSelection";
 const CrustSelection: React.FC<CrustSelectionProps> = ({ crust, setCrust }) => {
   return (
     <div className="flex justify-center">
-      {/* crust */}
       <div className="mb-8 flex gap-x-12 font-medium">
         <label className="flex cursor-pointer items-center gap-x-2">
           <input
