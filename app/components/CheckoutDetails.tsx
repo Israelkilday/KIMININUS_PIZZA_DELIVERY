@@ -290,7 +290,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
       const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaDePagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
         .map(
           (item) =>
-            `Quantidade: ${item.amount} - ${item.name}\n Total: ${(item.price * item.amount).toFixed(2)}`,
+            `Quantidade: ${item.amount} - ${item.name}\nTotal: ${(item.price * item.amount).toFixed(2)}`,
         )
         .join("\n")}`;
 

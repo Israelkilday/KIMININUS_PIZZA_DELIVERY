@@ -25,6 +25,7 @@ const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
         placeholder="Nome"
         className="input w-full"
       />
+
       <input
         type="text"
         name="telefone"
@@ -33,6 +34,7 @@ const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
         placeholder="Telefone"
         className="input w-full"
       />
+
       <input
         type="text"
         name="formaDePagamento"
@@ -41,6 +43,7 @@ const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
         placeholder="Forma de Pagamento"
         className="input w-full"
       />
+
       <input
         type="text"
         name="endereco"
@@ -49,13 +52,16 @@ const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
         placeholder="Endereço"
         className="input w-full"
       />
-      <textarea
-        name="informacoesAdicionais"
-        value={formData.informacoesAdicionais}
-        onChange={handleInputChange}
-        placeholder="Informações adicionais (opcional)"
-        className="textarea h-full w-full"
-      ></textarea>
+
+      <div className="h-full flex-1">
+        <textarea
+          name="informacoesAdicionais"
+          value={formData.informacoesAdicionais}
+          onChange={handleInputChange}
+          placeholder="Informações adicionais (opcional)"
+          className="textarea h-full w-full"
+        ></textarea>
+      </div>
     </div>
   );
 };
