@@ -46,7 +46,7 @@ https://github.com/user-attachments/assets/b453c233-7598-4499-ba7c-da4235c8c780
 - **_[React.js](https://pt-br.legacy.reactjs.org/)_**
 - **_[React-Modal](https://www.npmjs.com/package/react-modal)_**
 - **_[React Icons](https://react-icons.github.io/react-icons/)_**
-- **_[react-Parallax-mouse](https://www.npmjs.com/package/react-parallax-mouse)_**
+- **_[React-Parallax-mouse](https://www.npmjs.com/package/react-parallax-mouse)_**
 - **_[Contex API](https://legacy.reactjs.org/docs/context.html)_**
 - **_[TailwindCSS](https://tailwindcss.com/)_**
 - **_[Husky](https://www.freecodecamp.org/portuguese/news/como-adicionar-hooks-de-commit-ao-git-com-husky-para-automatizar-tarefas/)_**
