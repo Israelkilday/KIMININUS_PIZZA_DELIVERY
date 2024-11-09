@@ -21,14 +21,14 @@ const About = () => {
           className="object-cover brightness-50 lg:rounded-xl"
         />
 
-        <div className="absolute flex flex-col px-6 py-10 md:w-3/4 md:py-0 lg:w-2/3 lg:px-10 lg:py-16">
-          <h2 className="mb-4 pt-5 text-center font-bangers text-4xl text-white md:mb-5 md:pt-0 md:text-left lg:mb-6 lg:hidden lg:pt-1 lg:text-[45px]">
+        <div className="absolute flex flex-col px-6 py-10 md:w-3/4 md:py-10 lg:w-2/3 lg:px-10 lg:py-16">
+          <h2 className="mb-4 pt-5 text-center font-bangers text-4xl text-white md:mb-5 md:pt-0 md:text-left md:text-5xl lg:hidden">
             {" "}
             Sobre Nós
           </h2>
 
           <div className="flex flex-col border-l-2 border-yellow-400 pl-4">
-            <p className="mb-4 font-medium text-white lg:mb-5 lg:text-lg">
+            <p className="mb-4 font-medium text-white md:text-lg lg:mb-5">
               Desde 2023, a Kimininu&apos;s traz a autêntica pizza napolitana
               direto para a sua casa! Com um cardápio variado e ingredientes
               frescos, nosso objetivo é oferecer uma experiência única em cada
@@ -38,7 +38,7 @@ const About = () => {
             <div className="flex flex-col gap-4">
               <ul className="flex flex-col gap-y-4">
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
+                  <p className="flex items-center gap-2 font-medium text-white md:text-lg">
                     <FaPizzaSlice className="bg-gradient size-10 text-yellow-400 sm:size-7 lg:size-6" />
                     Variedade: pizzas clássicas e especiais que agradam todos os
                     paladares.
@@ -46,7 +46,7 @@ const About = () => {
                 </li>
 
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white lg:text-lg">
+                  <p className="flex items-center gap-2 font-medium text-white md:text-lg">
                     <TbTruckDelivery className="size-11 text-yellow-400 sm:size-8 lg:size-8" />{" "}
                     Delivery rápido: entregamos na sua porta com rapidez e
                     cuidado.
@@ -54,7 +54,7 @@ const About = () => {
                 </li>
 
                 <li>
-                  <p className="flex items-center gap-2 font-medium text-white lg:pb-1 lg:text-lg">
+                  <p className="flex items-center gap-2 font-medium text-white md:text-lg lg:pb-1">
                     <FaCheck className="size-12 text-yellow-400 sm:size-8 lg:size-7" />{" "}
                     Qualidade artesanal: nossas pizzas são preparadas com
                     ingredientes frescos e selecionados.
@@ -62,7 +62,7 @@ const About = () => {
                 </li>
               </ul>
 
-              <p className="mb-16 font-medium text-white md:mb-5 lg:mb-12 lg:text-lg">
+              <p className="mb-16 font-medium text-white md:mb-5 md:text-lg lg:mb-12">
                 {" "}
                 Venha experimentar o sabor de Kimininu&apos;s e faça seu pedido
                 agora!
@@ -77,7 +77,7 @@ const About = () => {
                 className="flex items-center gap-2"
               >
                 <FaArrowUpRightFromSquare className="size-6 text-yellow-400 lg:size-7" />
-                <span className="lg:text-lg">Saiba Mais</span>
+                <span className="md:text-lg">Saiba Mais</span>
               </a>
             </span>
           </div>
