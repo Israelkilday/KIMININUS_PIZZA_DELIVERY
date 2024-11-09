@@ -20,7 +20,7 @@ const Banner = () => {
             <div className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
               <div className="flex-1">
                 <h1 className="mt-24 animate-slide font-bangers text-6xl drop-shadow-md md:mt-10 lg:mt-0 lg:text-[80px]">
-                  A verdadeira pizza napo
+                  A verdadeira pizza napolitana
                   <br /> onde você estiver!
                 </h1>
               </div>
