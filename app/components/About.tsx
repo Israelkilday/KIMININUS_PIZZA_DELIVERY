@@ -29,10 +29,10 @@ const About = () => {
 
           <div className="flex flex-col border-l-2 border-yellow-400 pl-4">
             <p className="mb-4 font-medium text-white lg:mb-5 lg:text-lg">
-              Desde 2023, a Kimininu&apos;s traz a autêntica pizza napolitana da
-              pizza direto para a sua casa! Com um cardápio variado e
-              ingredientes frescos, nosso objetivo é oferecer uma experiência
-              única em cada mordida, combinando sabor, qualidade e conveniência.
+              Desde 2023, a Kimininu&apos;s traz a autêntica pizza napolitana
+              direto para a sua casa! Com um cardápio variado e ingredientes
+              frescos, nosso objetivo é oferecer uma experiência única em cada
+              mordida, combinando sabor, qualidade e conveniência.
             </p>
 
             <div className="flex flex-col gap-4">
