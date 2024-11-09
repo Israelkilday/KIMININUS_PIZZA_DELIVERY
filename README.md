@@ -24,6 +24,10 @@ https://github.com/user-attachments/assets/b453c233-7598-4499-ba7c-da4235c8c780
 
 > **summary -** O resumo dos recursos está listado abaixo..
 
+
+- [x] **Context API:_**
+- Através do CartContext criei funcionalidades como adicionar itens, modificar quantidades e calcular o total do pedido que são acessíveis em toda a aplicação. 
+- O usuário pode personalizar o tamanho, a crosta e adicionar coberturas adicionais às pizzas. 
 - [x] **_Interface Dinâmica e Responsiva:_**
 - Interface desenvolvida com `Nextjs` + `Tailwind`, proporcionando uma navegação rápida e uma experiência de usuário otimizada em diferentes dispositivos.
 - [x] **_Personalização do Pedido:_**
