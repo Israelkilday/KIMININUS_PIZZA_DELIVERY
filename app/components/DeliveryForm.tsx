@@ -16,7 +16,7 @@ type DeliveryFormProps = {
 
 const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
   return (
-    <div className="flex h-full flex-col gap-4">
+    <main className="flex h-full flex-col gap-4">
       <input
         type="text"
         name="nome"
@@ -62,7 +62,7 @@ const DeliveryForm = ({ formData, handleInputChange }: DeliveryFormProps) => {
           className="textarea h-full w-full"
         ></textarea>
       </div>
-    </div>
+    </main>
   );
 };
 

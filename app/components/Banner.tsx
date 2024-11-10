@@ -9,26 +9,26 @@ import {
 
 const Banner = () => {
   return (
-    <section className="bg-primary bg-pattern pt-16 lg:min-h-[768px] lg:pt-7">
-      <div className="container mx-auto flex min-h-[768px] items-center justify-center">
+    <main className="bg-primary bg-pattern pt-16 lg:min-h-[768px] lg:pt-7">
+      <section className="container mx-auto flex min-h-[768px] items-center justify-center">
         <MouseParallaxContainer
           globalFactorX={0.4}
           globalFactorY={0.3}
           className="flex w-full flex-col items-center justify-between lg:h-[670px] lg:flex-row"
         >
           <MouseParallaxChild factorX={0.1} factorY={0.2}>
-            <div className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
+            <section className="flex flex-1 flex-col items-center px-6 text-center text-white lg:flex-row lg:text-left">
               <div className="flex-1">
                 <h1 className="mt-20 animate-slide font-bangers text-6xl drop-shadow-md md:mt-10 lg:mt-0 lg:text-[80px]">
                   O melhor da pizza,
                   <br /> sem sair de casa!
                 </h1>
               </div>
-            </div>
+            </section>
           </MouseParallaxChild>
 
           <MouseParallaxChild factorX={0.2} factorY={0.3} className="relative">
-            <div className="flex flex-1 flex-col items-center px-6 text-center lg:flex-row lg:text-left">
+            <section className="flex flex-1 flex-col items-center px-6 text-center lg:flex-row lg:text-left">
               <div className="flex max-w-sm flex-1 animate-rotation justify-end lg:max-w-max">
                 <Image
                   src={"/pizza-banner.png"}
@@ -38,7 +38,7 @@ const Banner = () => {
                   priority={true}
                 />
               </div>
-            </div>
+            </section>
 
             <MouseParallaxChild
               factorX={0.2}
@@ -125,8 +125,8 @@ const Banner = () => {
             </MouseParallaxChild>
           </MouseParallaxChild>
         </MouseParallaxContainer>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 

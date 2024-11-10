@@ -33,7 +33,7 @@ const Toppings: React.FC<ToppingProps> = ({
   }, [isChecked]);
 
   return (
-    <div
+    <main
       className={`${isChecked && "border-orange"} relative flex h-[140px] w-full max-w-[100px] flex-col items-center justify-center rounded-md border bg-white p-1`}
     >
       <Image
@@ -60,7 +60,7 @@ const Toppings: React.FC<ToppingProps> = ({
       >
         <IoMdCheckmark className="text-xl text-orange" />
       </div>
-    </div>
+    </main>
   );
 };
 

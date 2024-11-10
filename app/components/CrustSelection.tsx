@@ -2,8 +2,8 @@ import { CrustSelectionProps } from "../types/CrustSelection";
 
 const CrustSelection: React.FC<CrustSelectionProps> = ({ crust, setCrust }) => {
   return (
-    <div className="flex justify-center">
-      <div className="mb-8 flex gap-x-12 font-medium">
+    <main className="flex justify-center">
+      <section className="mb-8 flex gap-x-12 font-medium">
         <label className="flex cursor-pointer items-center gap-x-2">
           <input
             type="radio"
@@ -27,8 +27,8 @@ const CrustSelection: React.FC<CrustSelectionProps> = ({ crust, setCrust }) => {
           />
           Fina
         </label>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

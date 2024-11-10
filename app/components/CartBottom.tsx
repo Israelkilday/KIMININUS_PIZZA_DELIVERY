@@ -25,9 +25,9 @@ const CartBottom = () => {
   };
 
   return (
-    <>
+    <main>
       {cart.length >= 1 ? (
-        <div className="mt-auto px-6 py-3 lg:py-6">
+        <section className="mt-auto px-6 py-3 lg:py-6">
           <div className="mb-6 flex items-center justify-between font-robotoCondensed text-lg font-semibold">
             <div>Total</div>
             <div>${cartTotal.toFixed(2)}</div>
@@ -43,11 +43,11 @@ const CartBottom = () => {
               Finalizar Compra
             </button>
           </div>
-        </div>
+        </section>
       ) : (
-        <div className="absolute top-0 -z-10 flex h-full w-full items-center justify-center">
+        <section className="absolute top-0 -z-10 flex h-full w-full items-center justify-center">
           <div>Seu carrinho está vazio</div>
-        </div>
+        </section>
       )}
 
       {modal && (
@@ -68,7 +68,7 @@ const CartBottom = () => {
           <CheckoutDetails setModal={setModal} />
         </Modal>
       )}
-    </>
+    </main>
   );
 };
 

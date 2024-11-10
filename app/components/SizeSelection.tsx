@@ -8,8 +8,8 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
   setSize,
 }) => {
   return (
-    <div className="mx-auto flex max-w-sm items-center justify-center lg:max-w-none lg:justify-start">
-      <div className="font-Media mb-10 flex items-baseline gap-x-12">
+    <main className="mx-auto flex max-w-sm items-center justify-center lg:max-w-none lg:justify-start">
+      <section className="font-Media mb-10 flex items-baseline gap-x-12">
         <label className="flex cursor-pointer flex-col items-center gap-x-2">
           <Image
             src={pizza.image}
@@ -66,8 +66,8 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
           />
           Grande
         </label>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

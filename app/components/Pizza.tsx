@@ -26,7 +26,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
   };
 
   return (
-    <div className="group rounded-xl px-4 py-2 xl:px-2 xl:py-4">
+    <main className="group rounded-xl px-4 py-2 xl:px-2 xl:py-4">
       <Image
         onClick={openModal}
         src={pizza.image}
@@ -37,15 +37,15 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
         className="mb-8 cursor-pointer transition-all duration-300 lg:group-hover:translate-y-3 xl:mb-2"
       />
 
-      <div onClick={openModal}>
+      <section onClick={openModal}>
         <div className="mb-3 cursor-pointer text-xl font-bold capitalize">
           {pizza.name}
         </div>
-      </div>
+      </section>
 
       <div className="mb-6 min-h-[60px] font-medium">{pizza.description}</div>
 
-      <div className="mb-6 flex items-center justify-between">
+      <section className="mb-6 flex items-center justify-between">
         <div className="flex font-semibold lg:text-xl">
           Pizza Grande R$ 25.99
         </div>
@@ -56,7 +56,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
         >
           Escolher
         </button>
-      </div>
+      </section>
 
       {modal && (
         <Modal
@@ -76,7 +76,7 @@ const Pizza: React.FC<PizzaProps> = ({ pizza }) => {
           <PizzaDetails pizza={pizza} modal={modal} setModal={setModal} />
         </Modal>
       )}
-    </div>
+    </main>
   );
 };
 

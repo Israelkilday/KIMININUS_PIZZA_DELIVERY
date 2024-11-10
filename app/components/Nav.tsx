@@ -9,7 +9,7 @@ const Nav = () => {
 
   return (
     <nav className="absolute w-full py-8">
-      <div className="container mx-auto mb-10 flex flex-col items-center justify-between gap-y-3 lg:flex-row">
+      <section className="container mx-auto mb-10 flex flex-col items-center justify-between gap-y-3 lg:flex-row">
         <Link href="/" className="max-w-[160px] lg:max-w-max">
           <h2 className="text-left font-bangers text-5xl uppercase text-white">
             kimi<span className="text-yellow-300">ninu&apos;s</span>
@@ -43,7 +43,7 @@ const Nav = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </nav>
   );
 };

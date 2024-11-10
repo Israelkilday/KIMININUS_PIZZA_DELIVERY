@@ -9,7 +9,7 @@ const CartDesktop = () => {
   const { isOpen, cart } = useCartContext();
 
   return (
-    <div
+    <main
       className={`${isOpen ? "left-0" : "-left-full"} fixed bottom-0 top-0 hidden w-[500px] flex-col bg-white shadow-2xl transition-all duration-300 lg:flex`}
     >
       <CartTop />
@@ -23,7 +23,7 @@ const CartDesktop = () => {
       </div>
 
       <CartBottom />
-    </div>
+    </main>
   );
 };
 

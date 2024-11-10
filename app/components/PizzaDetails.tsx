@@ -49,8 +49,8 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
   }, [additionalTopping]);
 
   return (
-    <div className="flex h-full flex-col md:p-8 lg:flex-row lg:gap-x-8">
-      <div className="flex items-center justify-center lg:flex-1">
+    <main className="flex h-full flex-col md:p-8 lg:flex-row lg:gap-x-8">
+      <section className="flex items-center justify-center lg:flex-1">
         <div className="mt-6 max-w-[300px] lg:mt-0 lg:max-w-none">
           <Image
             width={300}
@@ -61,12 +61,12 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
             className="relative mx-auto"
           />
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-1 flex-col">
+      <section className="flex flex-1 flex-col">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div className="h-[46vh] flex-1 overflow-y-scroll bg-white pr-2 scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-200 lg:h-[50vh]">
-            <div className="font-semibold">
+            <section className="font-semibold">
               <h2 className="mb-1 text-3xl capitalize">{pizza.name}</h2>
 
               <div className="font-Media mb-6 text-lg">
@@ -82,7 +82,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
 
                 <span>, Crosta {crust}</span>
               </div>
-            </div>
+            </section>
 
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
 
@@ -92,7 +92,7 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
               Escolher acompanhamento:
             </div>
 
-            <div className="flex flex-1 flex-wrap justify-center gap-2 py-1 lg:justify-start">
+            <section className="flex flex-1 flex-wrap justify-center gap-2 py-1 lg:justify-start">
               {pizza.toppings?.map((topping, index) => {
                 return (
                   <Toppings
@@ -103,11 +103,11 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
                   />
                 );
               })}
-            </div>
+            </section>
           </div>
         </div>
 
-        <div className="flex h-full items-center px-2 lg:items-end">
+        <section className="flex h-full items-center px-2 lg:items-end">
           <button
             onClick={() => {
               addToCart(
@@ -124,11 +124,12 @@ const PizzaDetails: React.FC<PizzaDetailsProps> = ({ pizza, setModal }) => {
             className="btn btn-lg gradient flex w-full justify-center"
           >
             <div>Adicionar ao carrinho&nbsp; </div>
+
             <div> $ {price}</div>
           </button>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </main>
   );
 };
 

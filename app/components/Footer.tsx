@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-primary bg-pattern px-2 py-10 lg:pt-12">
-      <div className="container">
+      <section className="container">
         <div className="flex flex-col justify-between gap-y-4 lg:flex-row">
           <div className="flex flex-col gap-y-4 lg:flex-row lg:gap-x-32">
             <Link href="/" className="max-w-[160px] lg:max-w-max">
@@ -94,7 +94,7 @@ const Footer = () => {
           2024.
           <br className="lg:hidden" /> Todos os direitos Reservados.
         </div>
-      </div>
+      </section>
     </footer>
   );
 };

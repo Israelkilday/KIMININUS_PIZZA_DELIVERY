@@ -377,10 +377,10 @@ const pizzas = [
 
 export default function Home() {
   return (
-    <section>
+    <main>
       <Banner />
 
-      <div className="container mx-auto">
+      <section className="container mx-auto">
         <h2 className="mt-10 text-center font-bangers text-4xl lg:mt-16 lg:text-[45px]">
           Nosso Cardápio de Pizzas
         </h2>
@@ -390,9 +390,9 @@ export default function Home() {
             return <Pizza key={pizza.id} pizza={pizza} />;
           })}
         </div>
-      </div>
+      </section>
 
       <About />
-    </section>
+    </main>
   );
 }

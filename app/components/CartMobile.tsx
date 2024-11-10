@@ -9,7 +9,7 @@ const CartMobile = () => {
   const { cart, isOpen } = useCartContext();
 
   return (
-    <div
+    <main
       className={`${isOpen ? "bottom-0" : "-bottom-full"} fixed left-0 z-20 flex h-full w-full flex-col bg-white transition-all duration-300 lg:hidden`}
     >
       <CartTop />
@@ -22,7 +22,7 @@ const CartMobile = () => {
       </div>
 
       <CartBottom />
-    </div>
+    </main>
   );
 };
 
