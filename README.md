@@ -37,7 +37,38 @@ https://github.com/user-attachments/assets/b453c233-7598-4499-ba7c-da4235c8c780
 - [x] **_Envio por WhatsApp:_**
 - Ao finalizar o pedido, os dados do pedido e do usuário são enviados para o WhatsApp da pizzaria.
 - [x] **_Feedback do Pedido:_**
-- Exibe uma mensagem de sucesso com contagem regressiva após o pedido. 
+- Exibe uma mensagem de sucesso com contagem regressiva após o pedido.
+
+## Enviando Pedidos pelo WhatsApp
+
+Este projeto inclui uma funcionalidade para enviar os detalhes de um pedido diretamente para o WhatsApp, facilitando a comunicação entre o cliente e o estabelecimento. Abaixo está o trecho de código responsável por essa funcionalidade:
+
+```env
+useEffect(() => {
+    const sendToWhatsApp = () => {
+      const message = `Nome: ${formData.nome}\nTelefone: ${formData.telefone}\nForma de Pagamento: ${formData.formaDePagamento}\nEndereço: ${formData.endereco}\nInformações adicionais: ${formData.informacoesAdicionais}\n\nPedido:\n${cart
+        .map(
+          (item) =>
+            `Quantidade: ${item.amount} - ${item.name}\nTotal: ${(item.price * item.amount).toFixed(2)}`,
+        )
+        .join("\n")}`;
+
+      const phoneNumber = "5585989908470";
+      const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+      window.open(url, "_blank");
+
+      setCart([]);
+      setModal(false);
+    };
+```
+
+> **Para que esta funcionalidade funcione corretamente, você deve:**
+
+1. Configurar o estado `FormData` com os dados do cliente.  
+2. Garantir que o `Cart` contenha os itens do pedido no formato esperado.  
+3. Substituir o número de telefone no código pelo número do WhatsApp do estabelecimento.
+
   
 ## 🛠️ Principais Tecnologias
 
