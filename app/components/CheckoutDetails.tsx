@@ -70,7 +70,7 @@ const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
         )
         .join("\n")}`;
 
-      const phoneNumber = "5585989908470";
+      const phoneNumber = "558599999999";
       const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
       window.open(url, "_blank");
